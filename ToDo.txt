@@ -1,0 +1,3 @@
+ensure base directory structure makes sense
+resolve search path for modules
+ensure no sensitive bits stored in project
