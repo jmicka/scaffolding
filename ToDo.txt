@@ -1,3 +1,4 @@
-ensure base directory structure makes sense
+finish refactoring DataPersistence to handle ios/osx split
+resolve unit tests which are still failing
 resolve search path for modules
 ensure no sensitive bits stored in project
