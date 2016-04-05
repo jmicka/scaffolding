@@ -11,33 +11,28 @@
 		09D41A241CB310D200F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A2C1CB319B200F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A2D1CB319E300F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
-		09E98D981CB30A2C0083DEDE /* osx_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E98D971CB30A2C0083DEDE /* osx_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09E98DA61CB30A2C0083DEDE /* osx_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E98DA51CB30A2C0083DEDE /* osx_commonTests.swift */; };
+		09D41A381CB4441D00F90D1B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A331CB4441D00F90D1B /* Info.plist */; };
+		09D41A4D1CB44A0800F90D1B /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
+		09D41A4E1CB44A0800F90D1B /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
+		09D41A4F1CB44A0A00F90D1B /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
+		09D41A511CB44A6B00F90D1B /* osx in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A501CB44A6B00F90D1B /* osx */; };
+		09D41A531CB44AF200F90D1B /* tests in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A521CB44AF200F90D1B /* tests */; };
 		09E98DAA1CB30A2C0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
-		09E98DBD1CB30D530083DEDE /* ios_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 09E98DBC1CB30D530083DEDE /* ios_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		09E98DC41CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
-		09E98DCB1CB30D530083DEDE /* ios_commonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E98DCA1CB30D530083DEDE /* ios_commonTests.swift */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09E98DDA1CB30EAC0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09E98DDB1CB30EAF0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09E98DDC1CB30EAF0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
-		09E98DDD1CB30EB70083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
-		09E98DDE1CB30EB80083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68531CAF17AE004CE47E /* AppDelegate.swift */; };
 		09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */; };
 		09EE68591CAF17AE004CE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EE68581CAF17AE004CE47E /* Assets.xcassets */; };
 		09EE685C1CAF17AE004CE47E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09EE685A1CAF17AE004CE47E /* MainMenu.xib */; };
-		09EE68671CAF17AE004CE47E /* osxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68661CAF17AE004CE47E /* osxTests.swift */; };
-		09EE68721CAF17AF004CE47E /* osxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68711CAF17AF004CE47E /* osxUITests.swift */; };
 		09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68851CAF180B004CE47E /* AppDelegate.swift */; };
 		09EE68881CAF180B004CE47E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68871CAF180B004CE47E /* ViewController.swift */; };
 		09EE688B1CAF180B004CE47E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EE68891CAF180B004CE47E /* Main.storyboard */; };
 		09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */; };
 		09EE68901CAF180B004CE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EE688F1CAF180B004CE47E /* Assets.xcassets */; };
 		09EE68931CAF180B004CE47E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09EE68911CAF180B004CE47E /* LaunchScreen.storyboard */; };
-		09EE689E1CAF180B004CE47E /* iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE689D1CAF180B004CE47E /* iosTests.swift */; };
-		09EE68A91CAF180B004CE47E /* iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68A81CAF180B004CE47E /* iosUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,18 +142,14 @@
 /* Begin PBXFileReference section */
 		09A29C751CAF2EBF004039E6 /* ToDo.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ToDo.txt; sourceTree = "<group>"; };
 		09D41A231CB310D200F90D1B /* CommonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonClass.swift; path = ../common/CommonClass.swift; sourceTree = "<group>"; };
+		09D41A331CB4441D00F90D1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09D41A341CB4441D00F90D1B /* ios_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_common.h; sourceTree = "<group>"; };
+		09D41A501CB44A6B00F90D1B /* osx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = osx; sourceTree = "<group>"; };
+		09D41A521CB44AF200F90D1B /* tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tests; sourceTree = "<group>"; };
 		09E98D951CB30A2C0083DEDE /* osx_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = osx_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E98D971CB30A2C0083DEDE /* osx_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = osx_common.h; sourceTree = "<group>"; };
-		09E98D991CB30A2C0083DEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E98D9E1CB30A2C0083DEDE /* osx.commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.commonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E98DA51CB30A2C0083DEDE /* osx_commonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osx_commonTests.swift; sourceTree = "<group>"; };
-		09E98DA71CB30A2C0083DEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E98DBA1CB30D530083DEDE /* ios_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E98DBC1CB30D530083DEDE /* ios_common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ios_common.h; sourceTree = "<group>"; };
-		09E98DBE1CB30D530083DEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09E98DC31CB30D530083DEDE /* ios.commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ios.commonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09E98DCA1CB30D530083DEDE /* ios_commonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios_commonTests.swift; sourceTree = "<group>"; };
-		09E98DCC1CB30D530083DEDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68501CAF17AE004CE47E /* osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68531CAF17AE004CE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EE68561CAF17AE004CE47E /* osx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = osx.xcdatamodel; sourceTree = "<group>"; };
@@ -166,11 +157,7 @@
 		09EE685B1CAF17AE004CE47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		09EE685D1CAF17AE004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68621CAF17AE004CE47E /* osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09EE68661CAF17AE004CE47E /* osxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osxTests.swift; sourceTree = "<group>"; };
-		09EE68681CAF17AE004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE686D1CAF17AF004CE47E /* osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09EE68711CAF17AF004CE47E /* osxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = osxUITests.swift; sourceTree = "<group>"; };
-		09EE68731CAF17AF004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68831CAF180B004CE47E /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68851CAF180B004CE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EE68871CAF180B004CE47E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,11 +167,7 @@
 		09EE68921CAF180B004CE47E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09EE68941CAF180B004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68991CAF180B004CE47E /* iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09EE689D1CAF180B004CE47E /* iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosTests.swift; sourceTree = "<group>"; };
-		09EE689F1CAF180B004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68A41CAF180B004CE47E /* iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		09EE68A81CAF180B004CE47E /* iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iosUITests.swift; sourceTree = "<group>"; };
-		09EE68AA1CAF180B004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DC41CB30D530083DEDE /* ios_common.framework in Frameworks */,
+				09D41A4F1CB44A0A00F90D1B /* ios_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,7 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DDD1CB30EB70083DEDE /* ios_common.framework in Frameworks */,
+				09D41A4D1CB44A0800F90D1B /* ios_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,69 +245,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DDE1CB30EB80083DEDE /* ios_common.framework in Frameworks */,
+				09D41A4E1CB44A0800F90D1B /* ios_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09E98D961CB30A2C0083DEDE /* osx_common */ = {
+		09D41A321CB4441D00F90D1B /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				09E98DA41CB30A2C0083DEDE /* Tests */,
-				09E98D971CB30A2C0083DEDE /* osx_common.h */,
-				09E98D991CB30A2C0083DEDE /* Info.plist */,
+				09D41A331CB4441D00F90D1B /* Info.plist */,
+				09D41A341CB4441D00F90D1B /* ios_common.h */,
 			);
-			name = osx_common;
-			path = osx.common;
-			sourceTree = SOURCE_ROOT;
-		};
-		09E98DA41CB30A2C0083DEDE /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09E98DA51CB30A2C0083DEDE /* osx_commonTests.swift */,
-				09E98DA71CB30A2C0083DEDE /* Info.plist */,
-			);
-			name = Tests;
-			path = osx.commonTests;
+			name = ios;
+			path = common/ios;
 			sourceTree = SOURCE_ROOT;
 		};
 		09E98DB21CB30A660083DEDE /* common */ = {
 			isa = PBXGroup;
 			children = (
+				09D41A501CB44A6B00F90D1B /* osx */,
+				09D41A321CB4441D00F90D1B /* ios */,
 				09D41A231CB310D200F90D1B /* CommonClass.swift */,
-				09E98DBB1CB30D530083DEDE /* ios_common */,
-				09E98D961CB30A2C0083DEDE /* osx_common */,
 			);
 			name = common;
 			path = osx;
 			sourceTree = "<group>";
 		};
-		09E98DBB1CB30D530083DEDE /* ios_common */ = {
-			isa = PBXGroup;
-			children = (
-				09E98DC91CB30D530083DEDE /* Tests */,
-				09E98DBC1CB30D530083DEDE /* ios_common.h */,
-				09E98DBE1CB30D530083DEDE /* Info.plist */,
-			);
-			name = ios_common;
-			path = ../ios.common;
-			sourceTree = "<group>";
-		};
-		09E98DC91CB30D530083DEDE /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09E98DCA1CB30D530083DEDE /* ios_commonTests.swift */,
-				09E98DCC1CB30D530083DEDE /* Info.plist */,
-			);
-			name = Tests;
-			path = ios.commonTests;
-			sourceTree = SOURCE_ROOT;
-		};
 		09EE68471CAF17AE004CE47E = {
 			isa = PBXGroup;
 			children = (
+				09D41A521CB44AF200F90D1B /* tests */,
 				09A29C751CAF2EBF004039E6 /* ToDo.txt */,
 				09E98DB21CB30A660083DEDE /* common */,
 				09EE68521CAF17AE004CE47E /* osx */,
@@ -353,8 +305,6 @@
 		09EE68521CAF17AE004CE47E /* osx */ = {
 			isa = PBXGroup;
 			children = (
-				09EE68651CAF17AE004CE47E /* Tests */,
-				09EE68701CAF17AF004CE47E /* UITests */,
 				09EE68531CAF17AE004CE47E /* AppDelegate.swift */,
 				09EE68581CAF17AE004CE47E /* Assets.xcassets */,
 				09EE685A1CAF17AE004CE47E /* MainMenu.xib */,
@@ -364,31 +314,9 @@
 			path = osx;
 			sourceTree = "<group>";
 		};
-		09EE68651CAF17AE004CE47E /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09EE68661CAF17AE004CE47E /* osxTests.swift */,
-				09EE68681CAF17AE004CE47E /* Info.plist */,
-			);
-			name = Tests;
-			path = osxTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		09EE68701CAF17AF004CE47E /* UITests */ = {
-			isa = PBXGroup;
-			children = (
-				09EE68711CAF17AF004CE47E /* osxUITests.swift */,
-				09EE68731CAF17AF004CE47E /* Info.plist */,
-			);
-			name = UITests;
-			path = osxUITests;
-			sourceTree = SOURCE_ROOT;
-		};
 		09EE68841CAF180B004CE47E /* ios */ = {
 			isa = PBXGroup;
 			children = (
-				09EE689C1CAF180B004CE47E /* Tests */,
-				09EE68A71CAF180B004CE47E /* UITests */,
 				09EE68851CAF180B004CE47E /* AppDelegate.swift */,
 				09EE68871CAF180B004CE47E /* ViewController.swift */,
 				09EE68891CAF180B004CE47E /* Main.storyboard */,
@@ -400,26 +328,6 @@
 			path = ios;
 			sourceTree = "<group>";
 		};
-		09EE689C1CAF180B004CE47E /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				09EE689D1CAF180B004CE47E /* iosTests.swift */,
-				09EE689F1CAF180B004CE47E /* Info.plist */,
-			);
-			name = Tests;
-			path = iosTests;
-			sourceTree = SOURCE_ROOT;
-		};
-		09EE68A71CAF180B004CE47E /* UITests */ = {
-			isa = PBXGroup;
-			children = (
-				09EE68A81CAF180B004CE47E /* iosUITests.swift */,
-				09EE68AA1CAF180B004CE47E /* Info.plist */,
-			);
-			name = UITests;
-			path = iosUITests;
-			sourceTree = SOURCE_ROOT;
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -427,7 +335,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98D981CB30A2C0083DEDE /* osx_common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +342,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DBD1CB30D530083DEDE /* ios_common.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +648,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EE68591CAF17AE004CE47E /* Assets.xcassets in Resources */,
+				09D41A511CB44A6B00F90D1B /* osx in Resources */,
 				09EE685C1CAF17AE004CE47E /* MainMenu.xib in Resources */,
+				09D41A531CB44AF200F90D1B /* tests in Resources */,
+				09D41A381CB4441D00F90D1B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -800,7 +709,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DA61CB30A2C0083DEDE /* osx_commonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,7 +724,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09E98DCB1CB30D530083DEDE /* ios_commonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -834,7 +741,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE68671CAF17AE004CE47E /* osxTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -842,7 +748,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE68721CAF17AF004CE47E /* osxUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -860,7 +765,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE689E1CAF180B004CE47E /* iosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,7 +772,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE68A91CAF180B004CE47E /* iosUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,12 +873,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				FRAMEWORK_VERSION = A;
 				HEADER_SEARCH_PATHS = ../Headers;
-				INFOPLIST_FILE = osx.common/Info.plist;
+				INFOPLIST_FILE = common/osx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osx_common;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osx.common;
 				PRODUCT_NAME = osx_common;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -993,12 +897,13 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj";
 				FRAMEWORK_VERSION = A;
 				HEADER_SEARCH_PATHS = ../Headers;
-				INFOPLIST_FILE = osx.common/Info.plist;
+				INFOPLIST_FILE = common/osx/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osx_common;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osx.common;
 				PRODUCT_NAME = osx_common;
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1010,7 +915,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = osx.commonTests/Info.plist;
+				INFOPLIST_FILE = tests/common/osx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.osx-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1022,7 +927,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = osx.commonTests/Info.plist;
+				INFOPLIST_FILE = tests/common/osx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.osx-commonTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1033,16 +938,20 @@
 		09E98DD21CB30D530083DEDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ios.common/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = common/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.ios.common;
 				PRODUCT_NAME = ios_common;
 				SDKROOT = iphoneos;
@@ -1056,16 +965,20 @@
 		09E98DD31CB30D530083DEDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = ios.common/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = common/ios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.ios.common;
 				PRODUCT_NAME = ios_common;
 				SDKROOT = iphoneos;
@@ -1081,7 +994,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = ios.commonTests/Info.plist;
+				INFOPLIST_FILE = tests/common/ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.ios-commonTests";
@@ -1095,7 +1008,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = ios.commonTests/Info.plist;
+				INFOPLIST_FILE = tests/common/ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.ios-commonTests";
@@ -1231,7 +1144,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = osxTests/Info.plist;
+				INFOPLIST_FILE = tests/osx/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxTests;
 				PRODUCT_NAME = osx;
@@ -1248,7 +1161,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = osxTests/Info.plist;
+				INFOPLIST_FILE = tests/osx/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxTests;
 				PRODUCT_NAME = osx;
@@ -1264,7 +1177,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = osxUITests/Info.plist;
+				INFOPLIST_FILE = tests/osx/UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxUITests;
 				PRODUCT_NAME = osx;
@@ -1280,7 +1193,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = osxUITests/Info.plist;
+				INFOPLIST_FILE = tests/osx/UITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxUITests;
 				PRODUCT_NAME = osx;
@@ -1342,7 +1255,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = iosTests/Info.plist;
+				INFOPLIST_FILE = tests/ios/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.iosTests;
@@ -1361,7 +1274,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = iosTests/Info.plist;
+				INFOPLIST_FILE = tests/ios/Tests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.iosTests;
@@ -1381,7 +1294,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = iosUITests/Info.plist;
+				INFOPLIST_FILE = tests/ios/UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.iosUITests;
@@ -1400,7 +1313,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = iosUITests/Info.plist;
+				INFOPLIST_FILE = tests/ios/UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.iosUITests;
