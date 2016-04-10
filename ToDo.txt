@@ -1,4 +1,6 @@
-finish refactoring DataPersistence to handle ios/osx split
 resolve unit tests which are still failing
-resolve search path for modules
+add unit tests for DataPersistence
+strip IBActions etc.
+create loading panel
+create basic views for launched app
 ensure no sensitive bits stored in project
