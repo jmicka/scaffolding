@@ -25,11 +25,6 @@
 		09D41A641CB462DF00F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A651CB462E500F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
 		09D41A661CB462E600F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
-		09D41A681CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
-		09D41A691CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
-		09D41A6A1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
-		09D41A6B1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
-		09D41A6C1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
 		09D41A6D1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
 		09D41A6E1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
 		09D41A6F1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
@@ -766,7 +761,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */,
-				09D41A681CBB042C00F90D1B /* Errors.swift in Sources */,
 				09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,7 +769,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D41A691CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -783,7 +776,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D41A6A1CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,7 +783,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D41A6B1CBB042C00F90D1B /* Errors.swift in Sources */,
 				09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */,
 				09EE68881CAF180B004CE47E /* ViewController.swift in Sources */,
 				09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */,
@@ -802,7 +793,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D41A6C1CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
