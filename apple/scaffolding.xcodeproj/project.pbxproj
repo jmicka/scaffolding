@@ -25,6 +25,15 @@
 		09D41A641CB462DF00F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A651CB462E500F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
 		09D41A661CB462E600F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
+		09D41A681CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A691CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6A1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6B1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6C1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6D1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6E1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A6F1CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
+		09D41A701CBB042C00F90D1B /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A671CBB042C00F90D1B /* Errors.swift */; };
 		09E98DAA1CB30A2C0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -155,6 +164,7 @@
 		09D41A521CB44AF200F90D1B /* tests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tests; sourceTree = "<group>"; };
 		09D41A5A1CB450A800F90D1B /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataPersistence.swift; path = common/DataPersistence.swift; sourceTree = SOURCE_ROOT; };
 		09D41A5E1CB4560B00F90D1B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = common/Constants.swift; sourceTree = SOURCE_ROOT; };
+		09D41A671CBB042C00F90D1B /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = common/Errors.swift; sourceTree = SOURCE_ROOT; };
 		09E98D951CB30A2C0083DEDE /* osx_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = osx_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E98D9E1CB30A2C0083DEDE /* osx.commonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.commonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E98DBA1CB30D530083DEDE /* ios_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -279,6 +289,7 @@
 				09D41A231CB310D200F90D1B /* CommonClass.swift */,
 				09D41A5E1CB4560B00F90D1B /* Constants.swift */,
 				09D41A5A1CB450A800F90D1B /* DataPersistence.swift */,
+				09D41A671CBB042C00F90D1B /* Errors.swift */,
 			);
 			name = common;
 			path = osx;
@@ -710,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6D1CBB042C00F90D1B /* Errors.swift in Sources */,
 				09D41A2D1CB319E300F90D1B /* CommonClass.swift in Sources */,
 				09D41A5D1CB451E600F90D1B /* DataPersistence.swift in Sources */,
 				09D41A5F1CB4560B00F90D1B /* Constants.swift in Sources */,
@@ -720,6 +732,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6E1CBB042C00F90D1B /* Errors.swift in Sources */,
 				09D41A651CB462E500F90D1B /* DataPersistence.swift in Sources */,
 				09D41A601CB4560B00F90D1B /* Constants.swift in Sources */,
 				09D41A631CB462DF00F90D1B /* CommonClass.swift in Sources */,
@@ -730,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6F1CBB042C00F90D1B /* Errors.swift in Sources */,
 				09D41A2C1CB319B200F90D1B /* CommonClass.swift in Sources */,
 				09D41A5C1CB451DF00F90D1B /* DataPersistence.swift in Sources */,
 				09D41A611CB4560B00F90D1B /* Constants.swift in Sources */,
@@ -740,6 +754,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A701CBB042C00F90D1B /* Errors.swift in Sources */,
 				09D41A661CB462E600F90D1B /* DataPersistence.swift in Sources */,
 				09D41A621CB4560B00F90D1B /* Constants.swift in Sources */,
 				09D41A641CB462DF00F90D1B /* CommonClass.swift in Sources */,
@@ -751,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */,
+				09D41A681CBB042C00F90D1B /* Errors.swift in Sources */,
 				09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,6 +775,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A691CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -766,6 +783,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6A1CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -773,6 +791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6B1CBB042C00F90D1B /* Errors.swift in Sources */,
 				09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */,
 				09EE68881CAF180B004CE47E /* ViewController.swift in Sources */,
 				09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */,
@@ -783,6 +802,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09D41A6C1CBB042C00F90D1B /* Errors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1163,6 +1183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1172,6 +1193,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxTests;
 				PRODUCT_NAME = osx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/osx.app/Contents/MacOS/osx";
 			};
 			name = Debug;
@@ -1180,6 +1202,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1196,6 +1219,7 @@
 		09EE687D1CAF17AF004CE47E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1205,6 +1229,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.osxUITests;
 				PRODUCT_NAME = osx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_TARGET_NAME = osx;
 			};
 			name = Debug;
@@ -1212,6 +1237,7 @@
 		09EE687E1CAF17AF004CE47E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1274,6 +1300,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1285,6 +1312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jedmicka.iosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.app/ios";
 			};
 			name = Debug;
@@ -1293,6 +1321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
