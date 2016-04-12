@@ -1,0 +1,19 @@
+
+CREATE OR REPLACE FUNCTION sp_trigger_sample()
+
+RETURNS TRIGGER AS $$
+
+<< outerblock >>
+DECLARE
+BEGIN
+
+	RETURN NEW;
+
+END
+$$ LANGUAGE PLPGSQL SECURITY DEFINER;
+
+
+DROP TRIGGER IF EXISTS trigger_sample ON t_sample;
+CREATE TRIGGER trigger_sample
+	AFTER INSERT OR UPDATE OR DELETE ON t_sample
+	FOR EACH ROW EXECUTE PROCEDURE sp_trigger_sample();
