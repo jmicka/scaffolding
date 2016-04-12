@@ -4,3 +4,4 @@ strip IBActions etc.
 create loading panel
 create basic views for launched app
 ensure no sensitive bits stored in project
+add AFNetworking
