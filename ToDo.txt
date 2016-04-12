@@ -1,4 +1,3 @@
-resolve unit tests which are still failing
 add unit tests for DataPersistence
 strip IBActions etc.
 create loading panel
