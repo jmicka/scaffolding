@@ -9,7 +9,7 @@
 import UIKit;
 import ios_common;
 
-class ViewController: UIViewController {
+class SampleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
