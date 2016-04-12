@@ -11,13 +11,14 @@ import ios_common;
 
 class SampleViewController: UIViewController {
 
+    override func loadView() {
+        let foo = CommonClass();
+        print(foo.getString());
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        let foo = CommonClass();
-        
-        print(foo.getString());
     }
 
     override func didReceiveMemoryWarning() {

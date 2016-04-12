@@ -1,7 +1,6 @@
 add unit tests for DataPersistence
-strip IBActions etc.
-create loading panel
-create basic views for launched app
+add loading panel
+standardize views across osx/ios
 ensure no sensitive bits stored in project
 add AFNetworking
 

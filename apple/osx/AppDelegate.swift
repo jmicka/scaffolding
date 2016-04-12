@@ -9,18 +9,23 @@
 import Cocoa;
 import osx_common;
 
-@NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!;
+    var window: NSWindow?;
+    var controller: SampleViewController?;
+    
     var datastore: DataPersistence = DataPersistence();
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        // Insert code here to initialize your application
+        window = NSWindow(contentRect: NSMakeRect(10, 10, 300, 300), styleMask: NSResizableWindowMask, backing: NSBackingStoreType.Buffered, defer: false);
         
-        let foo = CommonClass();
-        print(foo.getString());
+        controller = SampleViewController();
+        let content = window!.contentView!;
+        let view = controller!.view;
+        content.addSubview(view);
+        
+        window!.makeKeyAndOrderFront(nil);
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
