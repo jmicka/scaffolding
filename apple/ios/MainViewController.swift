@@ -6,11 +6,13 @@
 //  Copyright © 2016 Jedediah Micka. All rights reserved.
 //
 
-import UIKit
+import UIKit;
+import ios_common;
 
 class MainViewController: UIViewController {
     let rootviewcontroller: UITabBarController = UITabBarController();
-    let NAVBAR_COLOR: UIColor = UIColor(red: (37.0 / 255.0), green: (85.0 / 255.0), blue: (183.0 / 255.0), alpha: 1.0);
+    let NAVBAR_COLOR: UIColor = Color.Red.ios;
+    
     let NAVBAR_FONT: UIFont = UIFont(name: "Georgia", size: 22)!;
     
     override func viewDidLoad() {
@@ -26,8 +28,8 @@ class MainViewController: UIViewController {
         nav.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
         
         let navigationBarAppearace = UINavigationBar.appearance();
-        navigationBarAppearace.tintColor = UIColor.purpleColor();
-        navigationBarAppearace.barTintColor = UIColor.whiteColor();
+        navigationBarAppearace.tintColor = Color.DarkSteelBlue.ios;
+        navigationBarAppearace.barTintColor = Color.White.ios;
         navigationBarAppearace.titleTextAttributes = [ NSForegroundColorAttributeName: NAVBAR_COLOR, NSFontAttributeName: NAVBAR_FONT ];
         
         self.presentViewController(nav, animated: false, completion: nil);

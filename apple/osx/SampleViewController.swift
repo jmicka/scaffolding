@@ -14,7 +14,7 @@ class SampleViewController : NSViewController {
         let view = NSView(frame: NSMakeRect(0,0,100,100));
         view.wantsLayer = true;
         view.layer?.borderWidth = 2;
-        view.layer?.borderColor = NSColor.redColor().CGColor;
+        view.layer?.borderColor = Color.Red.osx.CGColor;
         self.view = view;
         
         

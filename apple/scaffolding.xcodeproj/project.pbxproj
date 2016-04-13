@@ -20,6 +20,10 @@
 		097A6A4E1CBCBAEF00636B8D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
 		097A6A4F1CBCBAEF00636B8D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
 		097A6A501CBCBAEF00636B8D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
+		097A6A561CBEFA1600636B8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A551CBEFA1600636B8D /* Color.swift */; };
+		097A6A571CBEFA1600636B8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A551CBEFA1600636B8D /* Color.swift */; };
+		097A6A581CBEFA1600636B8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A551CBEFA1600636B8D /* Color.swift */; };
+		097A6A591CBEFA1600636B8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A551CBEFA1600636B8D /* Color.swift */; };
 		09D41A2C1CB319B200F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A2D1CB319E300F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A381CB4441D00F90D1B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A331CB4441D00F90D1B /* Info.plist */; };
@@ -50,7 +54,6 @@
 		09E98DDC1CB30EAF0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68531CAF17AE004CE47E /* AppDelegate.swift */; };
 		09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */; };
-		09EE68591CAF17AE004CE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EE68581CAF17AE004CE47E /* Assets.xcassets */; };
 		09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68851CAF180B004CE47E /* AppDelegate.swift */; };
 		09EE68881CAF180B004CE47E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68871CAF180B004CE47E /* SampleViewController.swift */; };
 		09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */; };
@@ -165,6 +168,7 @@
 		097A6A3A1CBCB32000636B8D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		097A6A471CBCB91D00636B8D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
+		097A6A551CBEFA1600636B8D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		09D41A231CB310D200F90D1B /* CommonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonClass.swift; path = ../common/CommonClass.swift; sourceTree = "<group>"; };
 		09D41A331CB4441D00F90D1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09D41A341CB4441D00F90D1B /* ios_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_common.h; sourceTree = "<group>"; };
@@ -180,7 +184,6 @@
 		09EE68501CAF17AE004CE47E /* osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68531CAF17AE004CE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09EE68561CAF17AE004CE47E /* osx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = osx.xcdatamodel; sourceTree = "<group>"; };
-		09EE68581CAF17AE004CE47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09EE685D1CAF17AE004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		09EE68621CAF17AE004CE47E /* osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE686D1CAF17AF004CE47E /* osx.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +315,7 @@
 				09D41A5E1CB4560B00F90D1B /* Constants.swift */,
 				09D41A5A1CB450A800F90D1B /* DataPersistence.swift */,
 				09D41A671CBB042C00F90D1B /* Errors.swift */,
+				097A6A551CBEFA1600636B8D /* Color.swift */,
 			);
 			name = common;
 			path = osx;
@@ -351,7 +355,6 @@
 				09EE68531CAF17AE004CE47E /* AppDelegate.swift */,
 				097A6A511CBCBCF700636B8D /* Views */,
 				097A6A471CBCB91D00636B8D /* main.swift */,
-				09EE68581CAF17AE004CE47E /* Assets.xcassets */,
 				09EE685D1CAF17AE004CE47E /* Info.plist */,
 				09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */,
 			);
@@ -689,7 +692,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE68591CAF17AE004CE47E /* Assets.xcassets in Resources */,
 				09D41A511CB44A6B00F90D1B /* osx in Resources */,
 				09D41A531CB44AF200F90D1B /* tests in Resources */,
 				09D41A381CB4441D00F90D1B /* Info.plist in Resources */,
@@ -740,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A6D1CBB042C00F90D1B /* Errors.swift in Sources */,
+				097A6A561CBEFA1600636B8D /* Color.swift in Sources */,
 				09D41A2D1CB319E300F90D1B /* CommonClass.swift in Sources */,
 				09D41A5D1CB451E600F90D1B /* DataPersistence.swift in Sources */,
 				09D41A5F1CB4560B00F90D1B /* Constants.swift in Sources */,
@@ -751,6 +754,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A6E1CBB042C00F90D1B /* Errors.swift in Sources */,
+				097A6A571CBEFA1600636B8D /* Color.swift in Sources */,
 				09D41A651CB462E500F90D1B /* DataPersistence.swift in Sources */,
 				09D41A601CB4560B00F90D1B /* Constants.swift in Sources */,
 				09D41A631CB462DF00F90D1B /* CommonClass.swift in Sources */,
@@ -762,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A6F1CBB042C00F90D1B /* Errors.swift in Sources */,
+				097A6A581CBEFA1600636B8D /* Color.swift in Sources */,
 				09D41A2C1CB319B200F90D1B /* CommonClass.swift in Sources */,
 				09D41A5C1CB451DF00F90D1B /* DataPersistence.swift in Sources */,
 				09D41A611CB4560B00F90D1B /* Constants.swift in Sources */,
@@ -773,6 +778,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A701CBB042C00F90D1B /* Errors.swift in Sources */,
+				097A6A591CBEFA1600636B8D /* Color.swift in Sources */,
 				09D41A661CB462E600F90D1B /* DataPersistence.swift in Sources */,
 				09D41A621CB4560B00F90D1B /* Constants.swift in Sources */,
 				09D41A641CB462DF00F90D1B /* CommonClass.swift in Sources */,
