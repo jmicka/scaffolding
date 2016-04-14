@@ -6,5 +6,6 @@ add Handoff support
 add networking queue for offline comms
 add threading
 multithread core data
+Clean up directory structure for Source directory(group)
 
 
