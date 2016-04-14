@@ -1,6 +1,10 @@
 add unit tests for DataPersistence
-add loading panel
+add splash screen
 standardize views across osx/ios
 ensure no sensitive bits stored in project
-add AFNetworking
+add Handoff support
+add networking queue for offline comms
+add threading
+multithread core data
+
 
