@@ -1,15 +1,14 @@
 //
-//  osx_commonTests.swift
-//  osx.commonTests
+//  Tests_osx_unit.swift
+//  Tests/osx/unit
 //
-//  Created by Jedediah Micka on 4/4/16.
+//  Created by Jedediah Micka on 4/14/16.
 //  Copyright © 2016 Jedediah Micka. All rights reserved.
 //
 
 import XCTest
-@testable import osx_common
 
-class osx_commonTests: XCTestCase {
+class Tests_osx_unit: XCTestCase {
     
     override func setUp() {
         super.setUp()
