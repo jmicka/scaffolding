@@ -1,14 +1,14 @@
 //
-//  iosUITests.swift
-//  iosUITests
+//  Tests_ios_ui.swift
+//  Tests/ios/ui
 //
-//  Created by Jedediah Micka on 4/1/16.
+//  Created by Jedediah Micka on 4/14/16.
 //  Copyright © 2016 Jedediah Micka. All rights reserved.
 //
 
 import XCTest
 
-class iosUITests: XCTestCase {
+class Tests_ios_ui: XCTestCase {
         
     override func setUp() {
         super.setUp()

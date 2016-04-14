@@ -20,6 +20,20 @@
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "09DC1F671CC04B6800021D1B"
+               BuildableName = "osx.common.Tests.xctest"
+               BlueprintName = "osx.common.Tests"
+               ReferencedContainer = "container:scaffolding.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09EE68611CAF17AE004CE47E"
-               BuildableName = "osx.xctest"
-               BlueprintName = "osxTests"
+               BlueprintIdentifier = "09DC1F671CC04B6800021D1B"
+               BuildableName = "osx.common.Tests.xctest"
+               BlueprintName = "osx.common.Tests"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +56,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09EE686C1CAF17AF004CE47E"
-               BuildableName = "osx.xctest"
-               BlueprintName = "osxUITests"
+               BlueprintIdentifier = "09DC1FB41CC0505400021D1B"
+               BuildableName = "osx.Tests.unit.xctest"
+               BlueprintName = "osx.Tests.unit"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,9 +66,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09E98D9D1CB30A2C0083DEDE"
-               BuildableName = "osx.commonTests.xctest"
-               BlueprintName = "osx.commonTests"
+               BlueprintIdentifier = "09DC1FC21CC0508600021D1B"
+               BuildableName = "osx.Tests.ui.xctest"
+               BlueprintName = "osx.Tests.ui"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>

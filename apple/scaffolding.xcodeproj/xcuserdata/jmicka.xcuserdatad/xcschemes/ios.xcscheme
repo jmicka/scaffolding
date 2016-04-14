@@ -20,6 +20,20 @@
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "09DC1F7A1CC04DC800021D1B"
+               BuildableName = "ios.common.Tests.xctest"
+               BlueprintName = "ios.common.Tests"
+               ReferencedContainer = "container:scaffolding.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -32,9 +46,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09EE68981CAF180B004CE47E"
-               BuildableName = "iosTests.xctest"
-               BlueprintName = "iosTests"
+               BlueprintIdentifier = "09DC1F7A1CC04DC800021D1B"
+               BuildableName = "ios.common.Tests.xctest"
+               BlueprintName = "ios.common.Tests"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +56,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09EE68A31CAF180B004CE47E"
-               BuildableName = "iosUITests.xctest"
-               BlueprintName = "iosUITests"
+               BlueprintIdentifier = "09DC1F981CC04F7400021D1B"
+               BuildableName = "ios.Tests.unit.xctest"
+               BlueprintName = "ios.Tests.unit"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -52,9 +66,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09E98DC21CB30D530083DEDE"
-               BuildableName = "ios.commonTests.xctest"
-               BlueprintName = "ios.commonTests"
+               BlueprintIdentifier = "09DC1FA61CC04FB400021D1B"
+               BuildableName = "ios.Tests.ui.xctest"
+               BlueprintName = "ios.Tests.ui"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>

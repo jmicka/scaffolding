@@ -1,14 +1,14 @@
 //
-//  osxUITests.swift
-//  osxUITests
+//  Tests_osx_ui.swift
+//  Tests/osx/ui
 //
-//  Created by Jedediah Micka on 4/1/16.
+//  Created by Jedediah Micka on 4/14/16.
 //  Copyright © 2016 Jedediah Micka. All rights reserved.
 //
 
 import XCTest
 
-class osxUITests: XCTestCase {
+class Tests_osx_ui: XCTestCase {
         
     override func setUp() {
         super.setUp()
@@ -16,7 +16,7 @@ class osxUITests: XCTestCase {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
+        continueAfterFailure = true
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
 

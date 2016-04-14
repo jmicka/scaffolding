@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Tests/common/ios.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>Tests/common/osx.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>ios.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,6 +37,46 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>09DC1F591CC04A9D00021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1F671CC04B6800021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1F7A1CC04DC800021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1F8A1CC04F1700021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1F981CC04F7400021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1FA61CC04FB400021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1FB41CC0505400021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>09DC1FC21CC0508600021D1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>09E98D941CB30A2C0083DEDE</key>
 		<dict>
 			<key>primary</key>
