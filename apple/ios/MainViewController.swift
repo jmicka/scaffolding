@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.CreateViewLayout();
+        self.createViewLayout();
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
     }
     
     
-    private func CreateViewLayout() {
+    private func createViewLayout() {
         let firstVC: SampleViewController  = SampleViewController();
         let secondVC: SampleViewController  = SampleViewController();
         

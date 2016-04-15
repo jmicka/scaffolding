@@ -8,8 +8,10 @@
 
 import Cocoa
 
+let app = NSApplication.sharedApplication();
 let delegate = AppDelegate();
-NSApplication.sharedApplication().delegate = delegate;
+
+app.delegate = delegate;
 
 // start the run loop
 NSApplicationMain(Process.argc, Process.unsafeArgv);
