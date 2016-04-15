@@ -18,7 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-        window = NSWindow(contentRect: NSMakeRect(10, 10, 300, 300), styleMask: NSResizableWindowMask, backing: NSBackingStoreType.Buffered, defer: false);
+        let mask: Int = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask
+        window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.Buffered, defer: false);
+        window?.title = NSLocalizedString("App Title", comment: "title of application");
         
         controller = SampleViewController();
         let content = window!.contentView!;

@@ -8,9 +8,8 @@
 
 import Cocoa
 
-let delegate = AppDelegate() //alloc main app's delegate class
-NSApplication.sharedApplication().delegate = delegate //set as app's delegate
+let delegate = AppDelegate();
+NSApplication.sharedApplication().delegate = delegate;
 
-// Old versions:
-// NSApplicationMain(C_ARGC, C_ARGV)
-NSApplicationMain(Process.argc, Process.unsafeArgv);  //start of run loop
+// start the run loop
+NSApplicationMain(Process.argc, Process.unsafeArgv);

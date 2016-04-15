@@ -15,7 +15,6 @@
 		09D41A2C1CB319B200F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A2D1CB319E300F90D1B /* CommonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A231CB310D200F90D1B /* CommonClass.swift */; };
 		09D41A381CB4441D00F90D1B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A331CB4441D00F90D1B /* Info.plist */; };
-		09D41A511CB44A6B00F90D1B /* osx in Resources */ = {isa = PBXBuildFile; fileRef = 09D41A501CB44A6B00F90D1B /* osx */; };
 		09D41A5C1CB451DF00F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
 		09D41A5D1CB451E600F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
 		09D41A5F1CB4560B00F90D1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5E1CB4560B00F90D1B /* Constants.swift */; };
@@ -39,6 +38,7 @@
 		09EE68881CAF180B004CE47E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68871CAF180B004CE47E /* SampleViewController.swift */; };
 		09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */; };
 		09EE68901CAF180B004CE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EE688F1CAF180B004CE47E /* Assets.xcassets */; };
+		09F7064B1CC18C5D00576950 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09F706491CC18C5D00576950 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,12 +177,11 @@
 		097A6A3A1CBCB32000636B8D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		097A6A471CBCB91D00636B8D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		097A6A551CBEFA1600636B8D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		097A6A551CBEFA1600636B8D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = ../../../osx/Color.swift; sourceTree = "<group>"; };
 		097A6A5A1CC022CF00636B8D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../submodules/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
-		09D41A231CB310D200F90D1B /* CommonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonClass.swift; path = ../common/CommonClass.swift; sourceTree = "<group>"; };
-		09D41A331CB4441D00F90D1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09D41A341CB4441D00F90D1B /* ios_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ios_common.h; sourceTree = "<group>"; };
-		09D41A501CB44A6B00F90D1B /* osx */ = {isa = PBXFileReference; lastKnownFileType = folder; path = osx; sourceTree = "<group>"; };
+		09D41A231CB310D200F90D1B /* CommonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommonClass.swift; path = ../../../common/CommonClass.swift; sourceTree = "<group>"; };
+		09D41A331CB4441D00F90D1B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../common/ios/Info.plist; sourceTree = "<group>"; };
+		09D41A341CB4441D00F90D1B /* ios_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ios_common.h; path = ../../../common/ios/ios_common.h; sourceTree = "<group>"; };
 		09D41A5A1CB450A800F90D1B /* DataPersistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataPersistence.swift; path = common/DataPersistence.swift; sourceTree = SOURCE_ROOT; };
 		09D41A5E1CB4560B00F90D1B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = common/Constants.swift; sourceTree = SOURCE_ROOT; };
 		09D41A671CBB042C00F90D1B /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = common/Errors.swift; sourceTree = SOURCE_ROOT; };
@@ -216,6 +215,8 @@
 		09EE688D1CAF180B004CE47E /* ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios.xcdatamodel; sourceTree = "<group>"; };
 		09EE688F1CAF180B004CE47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09EE68941CAF180B004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F706491CC18C5D00576950 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../osx/osx/Info.plist; sourceTree = "<group>"; };
+		09F7064A1CC18C5D00576950 /* osx_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = osx_common.h; path = ../../../osx/osx/osx_common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,16 +328,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		09D41A321CB4441D00F90D1B /* ios */ = {
-			isa = PBXGroup;
-			children = (
-				09D41A331CB4441D00F90D1B /* Info.plist */,
-				09D41A341CB4441D00F90D1B /* ios_common.h */,
-			);
-			name = ios;
-			path = common/ios;
-			sourceTree = SOURCE_ROOT;
-		};
 		09DC1F691CC04B6800021D1B /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +424,8 @@
 			isa = PBXGroup;
 			children = (
 				09DC1FD41CC0513C00021D1B /* common */,
+				09EE68521CAF17AE004CE47E /* osx */,
+				09EE68841CAF180B004CE47E /* ios */,
 			);
 			name = Source;
 			path = Tests/common/osx;
@@ -443,6 +436,11 @@
 			children = (
 				09DC1FD61CC0515200021D1B /* ios */,
 				09DC1FD51CC0514C00021D1B /* osx */,
+				09D41A231CB310D200F90D1B /* CommonClass.swift */,
+				09D41A5E1CB4560B00F90D1B /* Constants.swift */,
+				09D41A5A1CB450A800F90D1B /* DataPersistence.swift */,
+				09D41A671CBB042C00F90D1B /* Errors.swift */,
+				097A6A551CBEFA1600636B8D /* Color.swift */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -450,6 +448,8 @@
 		09DC1FD51CC0514C00021D1B /* osx */ = {
 			isa = PBXGroup;
 			children = (
+				09F706491CC18C5D00576950 /* Info.plist */,
+				09F7064A1CC18C5D00576950 /* osx_common.h */,
 			);
 			name = osx;
 			sourceTree = "<group>";
@@ -457,6 +457,8 @@
 		09DC1FD61CC0515200021D1B /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				09D41A331CB4441D00F90D1B /* Info.plist */,
+				09D41A341CB4441D00F90D1B /* ios_common.h */,
 			);
 			name = ios;
 			sourceTree = "<group>";
@@ -464,13 +466,6 @@
 		09E98DB21CB30A660083DEDE /* common */ = {
 			isa = PBXGroup;
 			children = (
-				09D41A501CB44A6B00F90D1B /* osx */,
-				09D41A321CB4441D00F90D1B /* ios */,
-				09D41A231CB310D200F90D1B /* CommonClass.swift */,
-				09D41A5E1CB4560B00F90D1B /* Constants.swift */,
-				09D41A5A1CB450A800F90D1B /* DataPersistence.swift */,
-				09D41A671CBB042C00F90D1B /* Errors.swift */,
-				097A6A551CBEFA1600636B8D /* Color.swift */,
 			);
 			name = common;
 			path = osx;
@@ -481,8 +476,6 @@
 			children = (
 				097A6A5A1CC022CF00636B8D /* Alamofire.xcodeproj */,
 				09E98DB21CB30A660083DEDE /* common */,
-				09EE68521CAF17AE004CE47E /* osx */,
-				09EE68841CAF180B004CE47E /* ios */,
 				09DC1FD31CC0512F00021D1B /* Source */,
 				09DC1F691CC04B6800021D1B /* Tests */,
 				09EE68511CAF17AE004CE47E /* Products */,
@@ -515,7 +508,8 @@
 				09EE685D1CAF17AE004CE47E /* Info.plist */,
 				09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */,
 			);
-			path = osx;
+			name = osx;
+			path = ../../../osx;
 			sourceTree = "<group>";
 		};
 		09EE68841CAF180B004CE47E /* ios */ = {
@@ -527,7 +521,8 @@
 				09EE68941CAF180B004CE47E /* Info.plist */,
 				09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */,
 			);
-			path = ios;
+			name = ios;
+			path = ../../../ios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -927,8 +922,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09D41A511CB44A6B00F90D1B /* osx in Resources */,
 				09D41A381CB4441D00F90D1B /* Info.plist in Resources */,
+				09F7064B1CC18C5D00576950 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
