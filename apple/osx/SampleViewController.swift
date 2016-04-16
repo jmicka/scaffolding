@@ -10,20 +10,22 @@ import Cocoa;
 import osx_common;
 
 class SampleViewController : NSViewController {
+    private var view_color: Color = Color.Black;
+    
+    convenience init(color: Color) {
+        self.init();
+        self.view_color = color;
+    }
+    
     override func loadView() {
-        let view = NSView(frame: NSMakeRect(0,0,100,100));
+        self.view = NSView(frame: NSMakeRect(0,0,150,100));
         view.wantsLayer = true;
         view.layer?.borderWidth = 2;
-        view.layer?.borderColor = Color.Red.osx.CGColor;
+        view.layer?.borderColor = self.view_color.osx.CGColor;
         self.view = view;
-        
-        
-        let foo = CommonClass();
-        print(foo.getString());
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad();
     }
 }

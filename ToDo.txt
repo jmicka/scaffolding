@@ -1,11 +1,9 @@
 add unit tests for DataPersistence
 add splash screen
-standardize views across osx/ios
 ensure no sensitive bits stored in project
 add Handoff support
 add networking queue for offline comms
 add threading
 multithread core data
-complete menu for OS X
 
 

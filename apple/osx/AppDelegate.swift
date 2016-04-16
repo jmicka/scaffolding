@@ -12,7 +12,7 @@ import osx_common;
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow?;
-    var controller: SampleViewController?;
+    var controller: MainViewController?;
     var datastore: DataPersistence = DataPersistence();
 
     
@@ -29,21 +29,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } catch {
             abort();
         }
-    }
-    
-    func saveAction(sender: AnyObject!) {
-        do {
-            try datastore.saveContext();
-        } catch {
-        }
-    }
-    
-    func quitAction(sender: AnyObject!) {
-        applicationShouldTerminate(app);
-    }
-    
-    func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
-        return datastore.undoManager;
     }
     
     func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
@@ -86,25 +71,60 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return .TerminateNow;
     }
 
-
+    func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
+        return datastore.undoManager;
+    }
     
     
+    
+    // MARK: Menu-related functions
+    func aboutAction(sender: AnyObject!) {
+    }
+    
+    func saveAction(sender: AnyObject!) {
+        do {
+            try datastore.saveContext();
+        } catch {
+        }
+    }
+    
+    func quitAction(sender: AnyObject!) {
+        applicationShouldTerminate(app);
+    }
+    
+    func viewWindow1Action(sender: AnyObject!) {
+        controller?.loadFirstVC();
+    }
+    
+    
+    func viewWindow2Action(sender: AnyObject!) {
+        controller?.loadSecondVC();
+    }
+    
+    
+    
+    // MARK: Private functions
     private func createViewLayout() {
         let mask: Int = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask
-        window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.Buffered, defer: false);
-        window?.title = NSLocalizedString("App Title", comment: "title of application");
+        self.window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.Buffered, defer: false);
+        self.window?.title = NSLocalizedString("App Title", comment: "title of application");
         
-        controller = SampleViewController();
-        let content = window!.contentView!;
-        let view = controller!.view;
-        content.addSubview(view);
+        self.controller = MainViewController();
+        self.window!.contentView!.addSubview(controller!.view);
         
 
         let menu_tree = [
-            "App": [
-                NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(AppDelegate.saveAction(_:)), keyEquivalent:"s"),
+            "Apple": [
+                NSMenuItem(title: NSLocalizedString("About", comment: "about menu item"),  action: #selector(AppDelegate.quitAction(_:)), keyEquivalent:"?"),
+                NSMenuItem.separatorItem(),
                 NSMenuItem(title: NSLocalizedString("Quit", comment: "quit menu item"),  action: #selector(AppDelegate.quitAction(_:)), keyEquivalent:"q"),
-                NSMenuItem(title: NSLocalizedString("About", comment: "about menu item"),  action: nil, keyEquivalent:"?"),
+            ],
+            "File": [
+                NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(AppDelegate.saveAction(_:)), keyEquivalent:"s"),
+            ],
+            "Window": [
+                NSMenuItem(title: NSLocalizedString("Window 1", comment: "window 1 menu item"),  action: #selector(AppDelegate.viewWindow1Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Window 2", comment: "window 2 menu item"),  action: #selector(AppDelegate.viewWindow2Action(_:)), keyEquivalent:""),
             ]
         ];
         
