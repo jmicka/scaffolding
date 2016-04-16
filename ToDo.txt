@@ -5,5 +5,5 @@ add Handoff support
 add networking queue for offline comms
 add threading
 multithread core data
-
+resolve weirdness around testing OS X project
 

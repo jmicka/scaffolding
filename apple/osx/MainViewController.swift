@@ -28,17 +28,21 @@ class MainViewController : NSViewController {
     }
     
     private func createViewLayout() {
+        self.insertChildViewController(firstVC, atIndex: 0);
+        self.insertChildViewController(secondVC, atIndex: 1);
+        self.view.addSubview(firstVC.view);
+        self.view.addSubview(secondVC.view);
+        
+        self.firstVC.view.hidden = false;
     }
     
     func loadFirstVC() {
-        self.insertChildViewController(firstVC, atIndex: 0);
-        self.view.addSubview(firstVC.view);
-        self.view.frame = firstVC.view.frame;
+        self.firstVC.view.hidden = false;
+        self.secondVC.view.hidden = true;
     }
     
     func loadSecondVC() {
-        self.insertChildViewController(secondVC, atIndex: 1);
-        self.view.addSubview(secondVC.view);
-        self.view.frame = secondVC.view.frame;
+        self.secondVC.view.hidden = false;
+        self.firstVC.view.hidden = true;
     }
 }

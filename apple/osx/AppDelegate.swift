@@ -123,8 +123,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(AppDelegate.saveAction(_:)), keyEquivalent:"s"),
             ],
             "Window": [
-                NSMenuItem(title: NSLocalizedString("Window 1", comment: "window 1 menu item"),  action: #selector(AppDelegate.viewWindow1Action(_:)), keyEquivalent:""),
-                NSMenuItem(title: NSLocalizedString("Window 2", comment: "window 2 menu item"),  action: #selector(AppDelegate.viewWindow2Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Panel 1", comment: "panel 1 menu item"),  action: #selector(AppDelegate.viewWindow1Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Panel 2", comment: "panel 2 menu item"),  action: #selector(AppDelegate.viewWindow2Action(_:)), keyEquivalent:""),
             ]
         ];
         
@@ -143,4 +143,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         app.menu = main_menu;
     }
 }
-

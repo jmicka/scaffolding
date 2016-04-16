@@ -18,11 +18,11 @@ class SampleViewController : NSViewController {
     }
     
     override func loadView() {
-        self.view = NSView(frame: NSMakeRect(0,0,150,100));
-        view.wantsLayer = true;
-        view.layer?.borderWidth = 2;
-        view.layer?.borderColor = self.view_color.osx.CGColor;
-        self.view = view;
+        self.view = NSView(frame: NSMakeRect(300,300,150,100));
+        self.view.wantsLayer = true;
+        self.view.layer?.borderWidth = 2;
+        self.view.layer?.borderColor = self.view_color.osx.CGColor;
+        self.view.hidden = true;
     }
     
     override func viewDidLoad() {
