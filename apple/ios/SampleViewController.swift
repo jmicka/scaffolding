@@ -10,22 +10,31 @@ import UIKit;
 import ios_common;
 
 class SampleViewController: UIViewController {
+    private var view_color: Color = Color.Black;
 
+    convenience init(color: Color) {
+        self.init();
+        self.view_color = color;
+    }
+    
     override func loadView() {
-        let foo = CommonClass();
-        print(foo.getString());
+        self.view = UIView(frame: CGRect(x: 0,y: 0,width: 100,height: 50));
+        self.view.layer.borderWidth = 2;
+        self.view.layer.borderColor = self.view_color.ios.CGColor;
+        self.view.hidden = true;
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        self.tabBarController?.title = NSLocalizedString("View - ", comment: "Title for sample view") + self.view_color.description;
+        self.view.hidden = false;
+    }
 }
-

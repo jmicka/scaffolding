@@ -42,8 +42,8 @@ class MainViewController: UIViewController {
     
     
     private func createViewLayout() {
-        let firstVC: SampleViewController  = SampleViewController();
-        let secondVC: SampleViewController  = SampleViewController();
+        let firstVC: SampleViewController  = SampleViewController(color: Color.Red);
+        let secondVC: SampleViewController  = SampleViewController(color: Color.LightBlue);
         
         let controllers = [firstVC, secondVC]
         rootviewcontroller.viewControllers = controllers;
