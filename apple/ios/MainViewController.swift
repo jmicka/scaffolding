@@ -11,7 +11,7 @@ import ios_common;
 
 class MainViewController: UIViewController {
     let rootviewcontroller: UITabBarController = UITabBarController();
-    let NAVBAR_COLOR: UIColor = Color.Red.ios;
+    let NAVBAR_COLOR: UIColor = Color.DarkSteelBlue.ios;
     
     let NAVBAR_FONT: UIFont = UIFont(name: "Georgia", size: 22)!;
     
@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
+        
         
         // must attach after the root view controller appears
         let nav: UINavigationController = UINavigationController( rootViewController: rootviewcontroller );
