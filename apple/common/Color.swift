@@ -15,13 +15,14 @@ import AppKit;
 #endif
 
 public enum Color : Int {
-    case Black = 1, DarkGray, DarkGreen, DarkOrange, DarkRed, DarkSteelBlue, DarkYellow, Gray, Green, Gold, LightBlue, Orange, Red, White, Yellow
+    case Black = 1, Clear, DarkGray, DarkGreen, DarkOrange, DarkRed, DarkSteelBlue, DarkYellow, Gray, Green, Gold, LightBlue, Orange, Red, White, Yellow
 
 #if os(iOS)
     public var ios: UIColor {
         get {
             switch self {
             case .Black: return UIColor.blackColor();
+            case .Clear: return UIColor.clearColor();
             case .DarkGray: return UIColor(red: (55.0 / 255.0), green: (56.0 / 255.0), blue: (61.0 / 255.0), alpha: 1.0);
             case .DarkGreen: return UIColor(red: (7.0 / 255.0), green: (82.0 / 255.0), blue: (4.0 / 255.0), alpha: 1.0);
             case .DarkOrange: return UIColor(red: (158.0 / 255.0), green: (61.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
@@ -44,6 +45,7 @@ public enum Color : Int {
         get {
             switch self {
             case .Black: return NSColor.blackColor();
+            case .Clear: return NSColor.clearColor();
             case .DarkGray: return NSColor(red: (55.0 / 255.0), green: (56.0 / 255.0), blue: (61.0 / 255.0), alpha: 1.0);
             case .DarkGreen: return NSColor(red: (7.0 / 255.0), green: (82.0 / 255.0), blue: (4.0 / 255.0), alpha: 1.0);
             case .DarkOrange: return NSColor(red: (158.0 / 255.0), green: (61.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
@@ -74,6 +76,7 @@ extension Color : CustomStringConvertible {
         get {
             switch self {
             case .Black: return NSLocalizedString("black", comment: "name of textcolor");
+            case .Clear: return NSLocalizedString("clear", comment: "name of textcolor");
             case .DarkGray: return NSLocalizedString("dark gray", comment: "name of textcolor");
             case .DarkGreen: return NSLocalizedString("dark green", comment: "name of textcolor");
             case .DarkOrange: return NSLocalizedString("dark orange", comment: "name of textcolor");

@@ -10,7 +10,7 @@ import UIKit;
 import ios_common;
 
 class MainViewController: UIViewController {
-    let rootviewcontroller: UITabBarController = UITabBarController();
+    let root_view_controller: UITabBarController = UITabBarController();
     let NAVBAR_COLOR: UIColor = Color.DarkSteelBlue.ios;
     
     let NAVBAR_FONT: UIFont = UIFont(name: "Georgia", size: 22)!;
@@ -25,15 +25,16 @@ class MainViewController: UIViewController {
         
         
         // must attach after the root view controller appears
-        let nav: UINavigationController = UINavigationController( rootViewController: rootviewcontroller );
+        let nav: UINavigationController = UINavigationController( rootViewController: root_view_controller );
         nav.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
         
-        let navigationBarAppearace = UINavigationBar.appearance();
-        navigationBarAppearace.tintColor = Color.DarkSteelBlue.ios;
-        navigationBarAppearace.barTintColor = Color.White.ios;
-        navigationBarAppearace.titleTextAttributes = [ NSForegroundColorAttributeName: NAVBAR_COLOR, NSFontAttributeName: NAVBAR_FONT ];
+        let navigation_bar_appearace = UINavigationBar.appearance();
+        navigation_bar_appearace.tintColor = Color.DarkSteelBlue.ios;
+        navigation_bar_appearace.barTintColor = Color.White.ios;
+        navigation_bar_appearace.titleTextAttributes = [ NSForegroundColorAttributeName: NAVBAR_COLOR, NSFontAttributeName: NAVBAR_FONT ];
         
         self.presentViewController(nav, animated: false, completion: nil);
+        self.showLaunchProgressModal();
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,17 +44,28 @@ class MainViewController: UIViewController {
     
     
     private func createViewLayout() {
-        let firstVC: SampleViewController  = SampleViewController(color: Color.Red);
-        let secondVC: SampleViewController  = SampleViewController(color: Color.LightBlue);
+        let first_view_controller: SampleViewController  = SampleViewController(color: Color.Red);
+        let second_view_controller: SampleViewController  = SampleViewController(color: Color.LightBlue);
         
-        let controllers = [firstVC, secondVC]
-        rootviewcontroller.viewControllers = controllers;
+        let controllers = [first_view_controller, second_view_controller]
+        root_view_controller.viewControllers = controllers;
         
-        let firstimage = UIImage(named: "first icon");
-        let secondimage = UIImage(named: "second icon");
+        let first_image = UIImage(named: "first icon");
+        let second_image = UIImage(named: "second icon");
         
-        firstVC.tabBarItem = UITabBarItem(title: "First Tab", image: firstimage, tag: 1);
-        secondVC.tabBarItem = UITabBarItem(title: "Second Tab", image: secondimage, tag:2);
+        first_view_controller.tabBarItem = UITabBarItem(title: "First Tab", image: first_image, tag: 1);
+        second_view_controller.tabBarItem = UITabBarItem(title: "Second Tab", image: second_image, tag:2);
+    }
+    
+    
+    
+    private func showLaunchProgressModal() {
+        let modal_view_controller = LaunchProgressViewController();
+        modal_view_controller.modalPresentationStyle = .OverCurrentContext;
+        root_view_controller.presentViewController(modal_view_controller, animated: false, completion: { () -> Void in
+            modal_view_controller.loadApplication();
+            modal_view_controller.dismissViewController();
+        });
     }
 }
 
