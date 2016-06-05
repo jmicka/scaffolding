@@ -16,7 +16,7 @@ class MainViewController : NSViewController {
     let secondVC: SampleViewController  = SampleViewController(color: Color.LightBlue);
     
     override func loadView() {
-        self.view = NSView(frame: NSRect(x: 0,y: 0,width: 800,height: 600));
+        self.view = NSView(frame: NSRect(x: 0, y: 0, width: 800, height: 600));
         self.view.wantsLayer = true;
         self.view.layer?.backgroundColor = Color.DarkGray.osx.CGColor;
     }
@@ -25,6 +25,12 @@ class MainViewController : NSViewController {
         super.viewDidLoad();
         
         self.createViewLayout();
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear();
+        
+        self.showLaunchProgressModal();
     }
     
     private func createViewLayout() {
@@ -44,5 +50,11 @@ class MainViewController : NSViewController {
     func loadSecondVC() {
         self.secondVC.view.hidden = false;
         self.firstVC.view.hidden = true;
+    }
+    
+    func showLaunchProgressModal() {
+        let modal_view_controller = LaunchProgressViewController();
+        self.presentViewControllerAsSheet(modal_view_controller);
+        self.dismissViewController(modal_view_controller);
     }
 }

@@ -1,5 +1,6 @@
 add unit tests for DataPersistence
-add splash screen - OS X
+clean up splash screen for OS X (similar to iOS)
+Add auto layout to OS X 
 ensure no sensitive bits stored in project
 add Handoff support
 add networking queue for offline comms

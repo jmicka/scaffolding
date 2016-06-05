@@ -14,6 +14,7 @@ class LaunchProgressViewController: UIViewController {
         self.view = UIView();
         self.view.layer.borderWidth = 0;
         self.view.backgroundColor = Color.Clear.ios;
+        self.view.opaque = true;
         
         let subview = UIView(frame: CGRect(x: 0,y: 0,width: 300,height: 200));
         subview.translatesAutoresizingMaskIntoConstraints = false;
@@ -44,12 +45,8 @@ class LaunchProgressViewController: UIViewController {
         view.addConstraint(subview_constraint_to_vertically_center);
     }
     
-    override func viewDidLoad() {
-        self.view.opaque = true;
-    }
-    
     func dismissViewController() {
-        self.dismissViewControllerAnimated(false, completion: nil);
+        self
     }
     
     func loadApplication() {

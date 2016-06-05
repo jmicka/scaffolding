@@ -33,6 +33,9 @@
 		09DC1FC61CC0508600021D1B /* Tests_osx_ui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC1FC51CC0508600021D1B /* Tests_osx_ui.swift */; };
 		09DFF47C1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */; };
 		09DFF47D1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */; };
+		09DFF4801D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
+		09DFF4811D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
+		09DFF4821D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
 		09E98DAA1CB30A2C0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -211,6 +214,7 @@
 		09DC1FC51CC0508600021D1B /* Tests_osx_ui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_osx_ui.swift; path = ../../osx/ui/Tests_osx_ui.swift; sourceTree = "<group>"; };
 		09DC1FC71CC0508600021D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../osx/ui/Info.plist; sourceTree = "<group>"; };
 		09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchProgressViewController.swift; sourceTree = "<group>"; };
+		09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchProgressViewController.swift; sourceTree = "<group>"; };
 		09E98D951CB30A2C0083DEDE /* osx_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = osx_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E98DBA1CB30D530083DEDE /* ios_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68501CAF17AE004CE47E /* osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -308,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */,
+				09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */,
 				0933F11F1CC27DA5003581A6 /* MainViewController.swift */,
 			);
 			name = Views;
@@ -973,6 +978,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DFF4821D04C314006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09DC1FB81CC0505400021D1B /* Tests_osx_unit.swift in Sources */,
 				0933F1221CC27DA5003581A6 /* MainViewController.swift in Sources */,
 				0933F1241CC2870B003581A6 /* SampleViewController.swift in Sources */,
@@ -983,6 +989,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DFF4811D04C314006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09DC1FC61CC0508600021D1B /* Tests_osx_ui.swift in Sources */,
 				0933F1211CC27DA5003581A6 /* MainViewController.swift in Sources */,
 				0933F1231CC2870B003581A6 /* SampleViewController.swift in Sources */,
@@ -1017,6 +1024,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DFF4801D04C314006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */,
 				09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */,
 				097A6A4E1CBCBAEF00636B8D /* SampleViewController.swift in Sources */,

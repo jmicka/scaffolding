@@ -14,13 +14,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var window: NSWindow?;
     var controller: MainViewController?;
     var datastore: DataPersistence = DataPersistence();
-
-    
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+        app.activateIgnoringOtherApps(true);
+        
         self.createViewLayout();
         window!.makeKeyAndOrderFront(nil);
-        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
