@@ -31,6 +31,8 @@
 		09DC1FAA1CC04FB400021D1B /* Tests_ios_ui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC1FA91CC04FB400021D1B /* Tests_ios_ui.swift */; };
 		09DC1FB81CC0505400021D1B /* Tests_osx_unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC1FB71CC0505400021D1B /* Tests_osx_unit.swift */; };
 		09DC1FC61CC0508600021D1B /* Tests_osx_ui.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC1FC51CC0508600021D1B /* Tests_osx_ui.swift */; };
+		09DFF47C1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */; };
+		09DFF47D1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */; };
 		09E98DAA1CB30A2C0083DEDE /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -208,6 +210,7 @@
 		09DC1FC31CC0508600021D1B /* osx.Tests.ui.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osx.Tests.ui.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09DC1FC51CC0508600021D1B /* Tests_osx_ui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tests_osx_ui.swift; path = ../../osx/ui/Tests_osx_ui.swift; sourceTree = "<group>"; };
 		09DC1FC71CC0508600021D1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../osx/ui/Info.plist; sourceTree = "<group>"; };
+		09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchProgressViewController.swift; sourceTree = "<group>"; };
 		09E98D951CB30A2C0083DEDE /* osx_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = osx_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09E98DBA1CB30D530083DEDE /* ios_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68501CAF17AE004CE47E /* osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				09EE68871CAF180B004CE47E /* SampleViewController.swift */,
+				09DFF47B1D0448F1006D5162 /* LaunchProgressViewController.swift */,
 				097A6A3A1CBCB32000636B8D /* MainViewController.swift */,
 			);
 			name = Views;
@@ -960,6 +964,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09DFF47D1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09DC1FAA1CC04FB400021D1B /* Tests_ios_ui.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1025,6 +1030,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */,
+				09DFF47C1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09EE68881CAF180B004CE47E /* SampleViewController.swift in Sources */,
 				09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */,
 				097A6A3B1CBCB32000636B8D /* MainViewController.swift in Sources */,
