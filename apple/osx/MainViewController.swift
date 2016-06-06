@@ -16,7 +16,7 @@ class MainViewController : NSViewController {
     let secondVC: SampleViewController  = SampleViewController(color: Color.LightBlue);
     
     override func loadView() {
-        self.view = NSView(frame: NSRect(x: 0, y: 0, width: 800, height: 600));
+        self.view = NSView(frame: Constants.OSXWindowFrame);
         self.view.wantsLayer = true;
         self.view.layer!.backgroundColor = Color.DarkGray.osx.CGColor;
     }

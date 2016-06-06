@@ -19,5 +19,6 @@ var device: String = nil
 
 
 public struct Constants {
-    public static let Device: String = device
+    public static let Device: String = device;
+    public static let OSXWindowFrame: CGRect = CGRect(x:0, y:0, width: 800, height: 600);
 }

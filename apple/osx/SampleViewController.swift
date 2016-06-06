@@ -18,13 +18,13 @@ class SampleViewController : NSViewController {
     }
     
     override func loadView() {
-        self.view = NSView(frame: NSRect(x: 0, y: 0, width: 800, height: 600));
+        self.view = NSView(frame: Constants.OSXWindowFrame);
         self.view.wantsLayer = true;
         self.view.hidden = true;
         self.view.layer!.opaque = true;
         self.view.layer!.opacity = 1.0;
         self.view.layer!.borderWidth = 0;
-        self.view.layer!.backgroundColor = Color.Clear.osx.CGColor;
+        self.view.layer!.backgroundColor = Color.Gray.osx.CGColor;
         
         let subview = NSView(frame: CGRect(x: 0, y:0, width: 300, height: 200));
         subview.translatesAutoresizingMaskIntoConstraints = false;
@@ -43,7 +43,7 @@ class SampleViewController : NSViewController {
             "subview":subview
         ];
         let metric_dictionary = [
-            "subview_height": 100.0,
+            "subview_height":100.0,
             "subview_width":150.0
         ];
         
