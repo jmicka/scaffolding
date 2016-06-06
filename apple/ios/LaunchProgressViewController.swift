@@ -11,22 +11,31 @@ import ios_common;
 
 class LaunchProgressViewController: UIViewController {
     override func loadView() {
+        
+        
+        
         self.view = UIView();
+        self.view.opaque = true;
         self.view.layer.borderWidth = 0;
         self.view.backgroundColor = Color.Clear.ios;
-        self.view.opaque = true;
         
         let subview = UIView(frame: CGRect(x: 0,y: 0,width: 300,height: 200));
         subview.translatesAutoresizingMaskIntoConstraints = false;
+        subview.opaque = true;
+        subview.layer.borderWidth = 2;
         subview.backgroundColor = Color.Green.ios;
         subview.layer.borderColor = Color.DarkGreen.ios.CGColor;
-        subview.layer.borderWidth = 2;
         
         self.view.addSubview(subview);
         
         // add constraints for views
-        let view_dictionary = ["subview":subview];
-        let metric_dictionary = ["subview_min_height": 200.0,"subview_max_height": 400.0,"subview_min_width":300.0,"subview_max_width":300.0];
+        let view_dictionary = [
+            "subview":subview
+        ];
+        let metric_dictionary = [
+            "subview_min_height": 200.0,
+            "subview_min_width":300.0
+        ];
         
         // sizing constraints
         // subview
@@ -46,7 +55,7 @@ class LaunchProgressViewController: UIViewController {
     }
     
     func dismissViewController() {
-        self
+        self.dismissViewControllerAnimated(false, completion: nil);
     }
     
     func loadApplication() {

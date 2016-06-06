@@ -18,7 +18,7 @@ class MainViewController : NSViewController {
     override func loadView() {
         self.view = NSView(frame: NSRect(x: 0, y: 0, width: 800, height: 600));
         self.view.wantsLayer = true;
-        self.view.layer?.backgroundColor = Color.DarkGray.osx.CGColor;
+        self.view.layer!.backgroundColor = Color.DarkGray.osx.CGColor;
     }
     
     override func viewDidLoad() {

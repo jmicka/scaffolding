@@ -19,20 +19,28 @@ class SampleViewController: UIViewController {
     
     override func loadView() {
         self.view = UIView();
+        self.view.hidden = true;
+        self.view.opaque = true;
         self.view.layer.borderWidth = 0;
         self.view.backgroundColor = Color.White.ios;
-        self.view.hidden = true;
         
         let subview = UIView(frame: CGRect(x: 0,y: 0,width: 150,height: 100));
         subview.translatesAutoresizingMaskIntoConstraints = false;
-        subview.layer.borderColor = view_color.ios.CGColor;
+        subview.opaque = true;
         subview.layer.borderWidth = 2;
+        subview.layer.borderColor = view_color.ios.CGColor;
+        subview.layer.backgroundColor = Color.Clear.ios.CGColor;
         
         self.view.addSubview(subview);
         
         // add constraints for views
-        let view_dictionary = ["subview":subview];
-        let metric_dictionary = ["subview_height": 100.0,"subview_width":150.0];
+        let view_dictionary = [
+            "subview":subview
+        ];
+        let metric_dictionary = [
+            "subview_height": 100.0,
+            "subview_width":150.0
+        ];
         
         // sizing constraints
         // subview
