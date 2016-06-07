@@ -18,7 +18,9 @@ class MainViewController : NSViewController {
     override func loadView() {
         self.view = NSView(frame: Constants.OSXWindowFrame);
         self.view.wantsLayer = true;
+        self.view.autoresizesSubviews = true;
         self.view.layer!.backgroundColor = Color.DarkGray.osx.CGColor;
+        self.view.autoresizingMask = [NSAutoresizingMaskOptions.ViewWidthSizable, NSAutoresizingMaskOptions.ViewHeightSizable];
     }
     
     override func viewDidLoad() {

@@ -19,21 +19,25 @@ class SampleViewController : NSViewController {
     
     override func loadView() {
         self.view = NSView(frame: Constants.OSXWindowFrame);
+        self.view.autoresizesSubviews = true;
         self.view.wantsLayer = true;
         self.view.hidden = true;
         self.view.layer!.opaque = true;
         self.view.layer!.opacity = 1.0;
         self.view.layer!.borderWidth = 0;
         self.view.layer!.backgroundColor = Color.Gray.osx.CGColor;
+        self.view.autoresizingMask = [NSAutoresizingMaskOptions.ViewWidthSizable, NSAutoresizingMaskOptions.ViewHeightSizable];
         
         let subview = NSView(frame: CGRect(x: 0, y:0, width: 300, height: 200));
         subview.translatesAutoresizingMaskIntoConstraints = false;
+        subview.autoresizesSubviews = true;
         subview.wantsLayer = true;
         subview.layer!.opaque = true;
         subview.layer!.opacity = 1.0;
         subview.layer!.borderWidth = 2;
         subview.layer!.borderColor = self.view_color.osx.CGColor;
         subview.layer!.backgroundColor = Color.Clear.osx.CGColor;
+        subview.autoresizingMask = [NSAutoresizingMaskOptions.ViewWidthSizable, NSAutoresizingMaskOptions.ViewHeightSizable];
 
         
         self.view.addSubview(subview);
