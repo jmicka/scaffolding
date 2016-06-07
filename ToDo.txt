@@ -1,5 +1,4 @@
 add unit tests for DataPersistence
-force redraw on window resize in OS X 
 ensure no sensitive bits stored in project
 add Handoff support
 add networking queue for offline comms
