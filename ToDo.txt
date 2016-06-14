@@ -5,4 +5,5 @@ add networking queue for offline comms
 add threading
 multithread core data
 resolve weirdness around testing OS X project
+Remove nib-related errors in OS X project (add stub)
 
