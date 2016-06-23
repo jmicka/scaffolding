@@ -95,7 +95,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         controller?.loadFirstVC();
     }
     
-    
     func viewWindow2Action(sender: AnyObject!) {
         controller?.loadSecondVC();
     }

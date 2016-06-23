@@ -1,3 +1,7 @@
+refactor to leverage new structure for tests
+refactor to leverage new file structure
+refactor for swift 3
+
 add unit tests for DataPersistence
 ensure no sensitive bits stored in project
 add Handoff support
