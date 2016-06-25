@@ -20,19 +20,25 @@ public class DataPersistence {
     // MARK: - Core Data stack
     public lazy var applicationDocumentsDirectory: NSURL = {
         if (Constants.Device == "ios") {
-            let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask);
+            let urls = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask);
             return urls[urls.count-1];
         } else {
-            let urls = NSFileManager.defaultManager().URLsForDirectory(.ApplicationSupportDirectory, inDomains: .UserDomainMask);
-            let appSupportURL = urls[urls.count - 1];
-            return appSupportURL.URLByAppendingPathComponent("com.jedmicka.osx");
+            let urls = FileManager.default().urlsForDirectory(.applicationSupportDirectory, inDomains: .userDomainMask);
+            var appSupportURL = urls[urls.count - 1];
+            do {
+                //TODO: clean this handling up
+                try appSupportURL = appSupportURL.appendingPathComponent("com.jedmicka.osx");
+            } catch {
+                abort();
+            }
+            return appSupportURL;
         }
     }()
     
     public lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = NSBundle.mainBundle().URLForResource(Constants.Device, withExtension: "momd")!;
-        return NSManagedObjectModel(contentsOfURL: modelURL)!;
+        let modelURL = Bundle.main().urlForResource(Constants.Device, withExtension: "momd")!;
+        return NSManagedObjectModel(contentsOf: modelURL)!;
     }()
     
     public lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator = {
@@ -43,10 +49,10 @@ public class DataPersistence {
         
         if (Constants.Device == "ios") {
             coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel);
-            let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite");
+            let url = self.applicationDocumentsDirectory.appendingPathComponent("SingleViewCoreData.sqlite");
             var failureReason = "There was an error creating or loading the application's saved data.";
             do {
-                try coordinator!.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil);
+                try coordinator!.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil);
             } catch {
                 // Report any error we got.
                 var dict = [String: AnyObject]();
@@ -62,15 +68,15 @@ public class DataPersistence {
             }
         } else {
 #if os(OSX)
-            let fileManager = NSFileManager.defaultManager();
+            let fileManager = FileManager.default();
             var failError: NSError? = nil;
             var shouldFail = false;
             var failureReason = "There was an error creating or loading the application's saved data.";
             
             // Make sure the application files directory is there
             do {
-                let properties = try self.applicationDocumentsDirectory.resourceValuesForKeys([NSURLIsDirectoryKey]);
-                if !properties[NSURLIsDirectoryKey]!.boolValue {
+                let properties = try self.applicationDocumentsDirectory.resourceValues(forKeys: [URLResourceKey.isDirectoryKey]);
+                if !properties[URLResourceKey.isDirectoryKey]!.boolValue {
                     failureReason = "Expected a folder to store application data, found a file \(self.applicationDocumentsDirectory.path).";
                     shouldFail = true;
                 }
@@ -78,7 +84,7 @@ public class DataPersistence {
                 let nserror = error as NSError;
                 if nserror.code == NSFileReadNoSuchFileError {
                     do {
-                        try fileManager.createDirectoryAtPath(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil);
+                        //try fileManager.createDirectory(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil);
                     } catch {
                         failError = nserror;
                     }
@@ -90,9 +96,9 @@ public class DataPersistence {
             // Create the coordinator and store
             if failError == nil {
                 coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel);
-                let url = self.applicationDocumentsDirectory.URLByAppendingPathComponent("CocoaAppCD.storedata");
+                let url = self.applicationDocumentsDirectory.appendingPathComponent("CocoaAppCD.storedata");
                 do {
-                    try coordinator!.addPersistentStoreWithType(NSXMLStoreType, configuration: nil, URL: url, options: nil);
+                    try coordinator!.addPersistentStore(ofType: NSXMLStoreType, configurationName: nil, at: url, options: nil);
                 } catch {
                     failError = error as NSError;
                 }
@@ -107,7 +113,7 @@ public class DataPersistence {
                     dict[NSUnderlyingErrorKey] = failError;
                 }
                 let error = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict);
-                NSApplication.sharedApplication().presentError(error);
+                NSApplication.shared().presentError(error);
                 abort();
             }
 #endif
@@ -118,7 +124,7 @@ public class DataPersistence {
     public lazy var managedObjectContext: NSManagedObjectContext = {
         // Returns the managed object context for the application (which is already bound to the persistent store coordinator for the application.) This property is optional since there are legitimate error conditions that could cause the creation of the context to fail.
         let coordinator = self.persistentStoreCoordinator;
-        var managedObjectContext = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType);
+        var managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType);
         managedObjectContext.persistentStoreCoordinator = coordinator;
         return managedObjectContext;
     }()
@@ -126,7 +132,7 @@ public class DataPersistence {
     // MARK: - Core Data Saving support
     
     // variables returned to permit OSX and iOS to manage the data persistence layer from the front end
-    public var undoManager: NSUndoManager? {
+    public var undoManager: UndoManager? {
         get {
             return managedObjectContext.undoManager;
         }
