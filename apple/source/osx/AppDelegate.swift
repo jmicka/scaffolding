@@ -15,14 +15,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var controller: MainViewController?;
     var datastore: DataPersistence = DataPersistence();
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         app.activateIgnoringOtherApps(true);
         
         self.createViewLayout();
         window!.makeKeyAndOrderFront(nil);
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         do {
             try datastore.saveContext();
         } catch {
@@ -30,15 +30,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    func applicationShouldTerminate(sender: NSApplication) -> NSApplicationTerminateReply {
+    func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
         
         if !datastore.commitEditing() {
             NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate");
-            return .TerminateCancel;
+            return .terminateCancel;
         }
         
         if !datastore.hasChanges {
-            return .TerminateNow;
+            return .terminateNow;
         }
         
         do {
@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             // Customize this code block to include application-specific recovery steps.
             let result = sender.presentError(nserror);
             if (result) {
-                return .TerminateCancel;
+                return .terminateCancel;
             }
             
             let question = NSLocalizedString("Could not save changes while quitting. Quit anyway?", comment: "Quit without saves error question message");
@@ -58,44 +58,44 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             let alert = NSAlert();
             alert.messageText = question;
             alert.informativeText = info;
-            alert.addButtonWithTitle(quitButton);
-            alert.addButtonWithTitle(cancelButton);
+            alert.addButton(withTitle: quitButton);
+            alert.addButton(withTitle: cancelButton);
             
             let answer = alert.runModal();
             if answer == NSAlertFirstButtonReturn {
-                return .TerminateCancel;
+                return .terminateCancel;
             }
         }
         // If we got here, it is time to quit.
-        return .TerminateNow;
+        return .terminateNow;
     }
 
-    func windowWillReturnUndoManager(window: NSWindow) -> NSUndoManager? {
+    func windowWillReturnUndoManager(_ window: NSWindow) -> UndoManager? {
         return datastore.undoManager;
     }
     
     
     
     // MARK: Menu-related functions
-    func aboutAction(sender: AnyObject!) {
+    func aboutAction(_ sender: AnyObject!) {
     }
     
-    func saveAction(sender: AnyObject!) {
+    func saveAction(_ sender: AnyObject!) {
         do {
             try datastore.saveContext();
         } catch {
         }
     }
     
-    func quitAction(sender: AnyObject!) {
+    func quitAction(_ sender: AnyObject!) {
         applicationShouldTerminate(app);
     }
     
-    func viewWindow1Action(sender: AnyObject!) {
+    func viewWindow1Action(_ sender: AnyObject!) {
         controller?.loadFirstVC();
     }
     
-    func viewWindow2Action(sender: AnyObject!) {
+    func viewWindow2Action(_ sender: AnyObject!) {
         controller?.loadSecondVC();
     }
     
@@ -103,8 +103,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     // MARK: Private functions
     private func createViewLayout() {
-        let mask: Int = NSTitledWindowMask | NSClosableWindowMask | NSResizableWindowMask
-        self.window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.Buffered, defer: false);
+        let mask: NSWindowStyleMask = NSWindowStyleMask([.titled, .resizable, .miniaturizable, .closable]);
+        
+        self.window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.buffered, defer: false);
         self.window?.title = NSLocalizedString("App Title", comment: "title of application");
         
         self.controller = MainViewController();
@@ -113,16 +114,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let menu_tree = [
             "Apple": [
-                NSMenuItem(title: NSLocalizedString("About", comment: "about menu item"),  action: #selector(AppDelegate.quitAction(_:)), keyEquivalent:"?"),
-                NSMenuItem.separatorItem(),
-                NSMenuItem(title: NSLocalizedString("Quit", comment: "quit menu item"),  action: #selector(AppDelegate.quitAction(_:)), keyEquivalent:"q"),
+                NSMenuItem(title: NSLocalizedString("About", comment: "about menu item"),  action: #selector(self.quitAction(_:)), keyEquivalent:"?"),
+                NSMenuItem.separator(),
+                NSMenuItem(title: NSLocalizedString("Quit", comment: "quit menu item"),  action: #selector(self.quitAction(_:)), keyEquivalent:"q"),
             ],
             "File": [
-                NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(AppDelegate.saveAction(_:)), keyEquivalent:"s"),
+                NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(self.saveAction(_:)), keyEquivalent:"s"),
             ],
             "Window": [
-                NSMenuItem(title: NSLocalizedString("Panel 1", comment: "panel 1 menu item"),  action: #selector(AppDelegate.viewWindow1Action(_:)), keyEquivalent:""),
-                NSMenuItem(title: NSLocalizedString("Panel 2", comment: "panel 2 menu item"),  action: #selector(AppDelegate.viewWindow2Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Panel 1", comment: "panel 1 menu item"),  action: #selector(self.viewWindow1Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Panel 2", comment: "panel 2 menu item"),  action: #selector(self.viewWindow2Action(_:)), keyEquivalent:""),
             ]
         ];
         
@@ -130,8 +131,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         for (title, items) in menu_tree {
             let menu = NSMenu(title: title);
-            if let item = main_menu.addItemWithTitle(title, action: nil, keyEquivalent:"") {
-                main_menu.setSubmenu(menu, forItem: item);
+            if let item: NSMenuItem? = main_menu.addItem(withTitle: title, action: nil, keyEquivalent:"") {
+                main_menu.setSubmenu(menu, for: item!);
                 for item in items {
                     menu.addItem(item);
                 }

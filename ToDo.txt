@@ -1,6 +1,6 @@
-refactor to leverage new structure for tests
-refactor to leverage new file structure
-refactor for swift 3
+Resolve issue with UI tests failing
+Resolve warnings on returning methods that don’t check return values
+Resolve menu functions in OS X app that no longer work (quit)
 
 add unit tests for DataPersistence
 ensure no sensitive bits stored in project

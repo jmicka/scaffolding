@@ -19,8 +19,8 @@ class MainViewController : NSViewController {
         self.view = NSView(frame: Constants.OSXWindowFrame);
         self.view.wantsLayer = true;
         self.view.autoresizesSubviews = true;
-        self.view.layer!.backgroundColor = Color.DarkGray.osx.CGColor;
-        self.view.autoresizingMask = [NSAutoresizingMaskOptions.ViewWidthSizable, NSAutoresizingMaskOptions.ViewHeightSizable];
+        self.view.layer!.backgroundColor = Color.DarkGray.osx.cgColor;
+        self.view.autoresizingMask = [NSAutoresizingMaskOptions.viewWidthSizable, NSAutoresizingMaskOptions.viewHeightSizable];
     }
     
     override func viewDidLoad() {
@@ -34,24 +34,24 @@ class MainViewController : NSViewController {
         
         self.showLaunchProgressModal();
     }
-    
+
     private func createViewLayout() {
-        self.insertChildViewController(firstVC, atIndex: 0);
-        self.insertChildViewController(secondVC, atIndex: 1);
+        self.insertChildViewController(firstVC, at: 0);
+        self.insertChildViewController(secondVC, at: 1);
         self.view.addSubview(firstVC.view);
         self.view.addSubview(secondVC.view);
         
-        self.firstVC.view.hidden = false;
+        self.firstVC.view.isHidden = false;
     }
-    
+
     func loadFirstVC() {
-        self.firstVC.view.hidden = false;
-        self.secondVC.view.hidden = true;
+        self.firstVC.view.isHidden = false;
+        self.secondVC.view.isHidden = true;
     }
     
     func loadSecondVC() {
-        self.secondVC.view.hidden = false;
-        self.firstVC.view.hidden = true;
+        self.secondVC.view.isHidden = false;
+        self.firstVC.view.isHidden = true;
     }
     
     func showLaunchProgressModal() {

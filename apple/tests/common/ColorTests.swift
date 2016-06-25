@@ -7,7 +7,12 @@
 //
 
 import XCTest;
-@testable import ios_common;
+#if os(iOS)
+    @testable import ios_common;
+#elseif os(OSX)
+    @testable import osx_common;
+#endif
+
 
 class ColorTests: XCTestCase {
     

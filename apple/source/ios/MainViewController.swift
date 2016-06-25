@@ -20,26 +20,37 @@ class MainViewController: UIViewController {
         self.createViewLayout();
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         
         
         // must attach after the root view controller appears
         let nav: UINavigationController = UINavigationController( rootViewController: root_view_controller );
-        nav.modalPresentationStyle = UIModalPresentationStyle.FullScreen;
+        nav.modalPresentationStyle = UIModalPresentationStyle.fullScreen;
         
         let navigation_bar_appearace = UINavigationBar.appearance();
         navigation_bar_appearace.tintColor = Color.DarkSteelBlue.ios;
         navigation_bar_appearace.barTintColor = Color.White.ios;
         navigation_bar_appearace.titleTextAttributes = [ NSForegroundColorAttributeName: NAVBAR_COLOR, NSFontAttributeName: NAVBAR_FONT ];
         
-        self.presentViewController(nav, animated: false, completion: nil);
+        self.present(nav, animated: false, completion: nil);
         self.showLaunchProgressModal();
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning();
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func shouldAutorotate() -> Bool {
+        // permit any recognized autorotate except upside down
+        if (UIDevice.current().orientation == UIDeviceOrientation.portrait ||
+            UIDevice.current().orientation == UIDeviceOrientation.unknown) {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
     
     
@@ -61,8 +72,8 @@ class MainViewController: UIViewController {
     
     private func showLaunchProgressModal() {
         let modal_view_controller = LaunchProgressViewController();
-        modal_view_controller.modalPresentationStyle = .OverCurrentContext;
-        root_view_controller.presentViewController(modal_view_controller, animated: false, completion: { () -> Void in
+        modal_view_controller.modalPresentationStyle = .overCurrentContext;
+        root_view_controller.present(modal_view_controller, animated: false, completion: { () -> Void in
             modal_view_controller.loadApplication();
             modal_view_controller.dismissViewController();
         });

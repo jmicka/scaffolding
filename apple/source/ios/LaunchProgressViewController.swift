@@ -15,16 +15,16 @@ class LaunchProgressViewController: UIViewController {
         
         
         self.view = UIView();
-        self.view.opaque = true;
+        self.view.isOpaque = true;
         self.view.layer.borderWidth = 0;
         self.view.backgroundColor = Color.Clear.ios;
         
         let subview = UIView(frame: CGRect(x: 0,y: 0,width: 300,height: 200));
         subview.translatesAutoresizingMaskIntoConstraints = false;
-        subview.opaque = true;
+        subview.isOpaque = true;
         subview.layer.borderWidth = 2;
         subview.backgroundColor = Color.Green.ios;
-        subview.layer.borderColor = Color.DarkGreen.ios.CGColor;
+        subview.layer.borderColor = Color.DarkGreen.ios.cgColor;
         
         self.view.addSubview(subview);
         
@@ -41,8 +41,8 @@ class LaunchProgressViewController: UIViewController {
         
         // sizing constraints
         // subview
-        let subview_horizontal_size_constraint: Array = NSLayoutConstraint.constraintsWithVisualFormat("H:[subview(>=subview_min_width,<=subview_max_width)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
-        let subview_vertical_size_constraint: Array = NSLayoutConstraint.constraintsWithVisualFormat("V:[subview(>=subview_min_height,<=subview_max_height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
+        let subview_horizontal_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "H:[subview(>=subview_min_width,<=subview_max_width)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
+        let subview_vertical_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "V:[subview(>=subview_min_height,<=subview_max_height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
         subview.addConstraints(subview_horizontal_size_constraint);
         subview.addConstraints(subview_vertical_size_constraint);
         
@@ -50,14 +50,14 @@ class LaunchProgressViewController: UIViewController {
         // views
         
         // centering
-        let subview_constraint_to_horizontally_center: NSLayoutConstraint = NSLayoutConstraint(item: subview, attribute: .CenterX, relatedBy: .Equal, toItem: view, attribute: .CenterX, multiplier: 1, constant: 0);
-        let subview_constraint_to_vertically_center: NSLayoutConstraint = NSLayoutConstraint(item: subview, attribute: .CenterY, relatedBy: .Equal, toItem: view, attribute: .CenterY, multiplier: 1, constant: 0);
+        let subview_constraint_to_horizontally_center: NSLayoutConstraint = NSLayoutConstraint(item: subview, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0);
+        let subview_constraint_to_vertically_center: NSLayoutConstraint = NSLayoutConstraint(item: subview, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0);
         view.addConstraint(subview_constraint_to_horizontally_center);
         view.addConstraint(subview_constraint_to_vertically_center);
     }
     
     func dismissViewController() {
-        self.dismissViewControllerAnimated(false, completion: nil);
+        self.dismiss(animated: false, completion: nil);
     }
     
     func loadApplication() {
