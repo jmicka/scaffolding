@@ -18,6 +18,9 @@
 		097A6A3B1CBCB32000636B8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A3A1CBCB32000636B8D /* MainViewController.swift */; };
 		097A6A481CBCB91D00636B8D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A471CBCB91D00636B8D /* main.swift */; };
 		097A6A4E1CBCBAEF00636B8D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
+		09BDC8A31D2076F100647E58 /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
+		09BDC8AB1D20782F00647E58 /* osx_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		09BDC8AD1D20789A00647E58 /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09CB0B471D1EFBCA0000C5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5E1CB4560B00F90D1B /* Constants.swift */; };
 		09CB0B481D1EFBCE0000C5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5E1CB4560B00F90D1B /* Constants.swift */; };
 		09D41A5C1CB451DF00F90D1B /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5A1CB450A800F90D1B /* DataPersistence.swift */; };
@@ -36,7 +39,6 @@
 		09DFF4811D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
 		09DFF4821D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
-		09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68531CAF17AE004CE47E /* AppDelegate.swift */; };
 		09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */; };
 		09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68851CAF180B004CE47E /* AppDelegate.swift */; };
@@ -169,7 +171,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				09E98DD01CB30D530083DEDE /* ios_common.framework in Embed Frameworks */,
+				09BDC8AD1D20789A00647E58 /* ios_common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +182,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				09BDC8AB1D20782F00647E58 /* osx_common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +281,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09BDC8A31D2076F100647E58 /* osx_common.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

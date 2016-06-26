@@ -1,13 +1,10 @@
-Resolve issue with UI tests failing
 Resolve menu functions in OS X app that no longer work (quit)
-
 refactor _ = handling of methods a bit better in main/appDelegate of OS X
+
 add unit tests for DataPersistence
 ensure no sensitive bits stored in project
 add Handoff support
 add networking queue for offline comms
 add threading
 multithread core data
-resolve weirdness around testing OS X project
-Remove nib-related errors in OS X project (add stub)
 

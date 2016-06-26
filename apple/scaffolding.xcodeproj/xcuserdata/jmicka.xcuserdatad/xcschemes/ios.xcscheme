@@ -35,7 +35,7 @@
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
-            buildForTesting = "NO"
+            buildForTesting = "YES"
             buildForRunning = "NO"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
@@ -73,6 +73,16 @@
                BlueprintIdentifier = "09DC1F981CC04F7400021D1B"
                BuildableName = "ios.Tests.unit.xctest"
                BlueprintName = "ios.Tests.unit"
+               ReferencedContainer = "container:scaffolding.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "09DC1FA61CC04FB400021D1B"
+               BuildableName = "ios.Tests.ui.xctest"
+               BlueprintName = "ios.Tests.ui"
                ReferencedContainer = "container:scaffolding.xcodeproj">
             </BuildableReference>
          </TestableReference>
