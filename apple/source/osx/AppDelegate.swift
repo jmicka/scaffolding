@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationWillTerminate(_ aNotification: Notification) {
         do {
-            try datastore.saveContext();
+            _ = try datastore.saveContext();
         } catch {
             abort();
         }
@@ -42,7 +42,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         do {
-            try datastore.saveContext();
+            _ = try datastore.saveContext();
         } catch {
             let nserror = error as NSError;
             // Customize this code block to include application-specific recovery steps.
@@ -82,21 +82,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func saveAction(_ sender: AnyObject!) {
         do {
-            try datastore.saveContext();
+            _ = try datastore.saveContext();
         } catch {
         }
     }
     
     func quitAction(_ sender: AnyObject!) {
-        applicationShouldTerminate(app);
+        _ = applicationShouldTerminate(app);
     }
     
     func viewWindow1Action(_ sender: AnyObject!) {
-        controller?.loadFirstVC();
+        _ = controller?.loadFirstVC();
     }
     
     func viewWindow2Action(_ sender: AnyObject!) {
-        controller?.loadSecondVC();
+        _ = controller?.loadSecondVC();
     }
     
     
