@@ -81,16 +81,7 @@ public class DataPersistence {
                     shouldFail = true;
                 }
             } catch  {
-                let nserror = error as NSError;
-                if nserror.code == NSFileReadNoSuchFileError {
-                    do {
-                        //try fileManager.createDirectory(self.applicationDocumentsDirectory.path!, withIntermediateDirectories: true, attributes: nil);
-                    } catch {
-                        failError = nserror;
-                    }
-                } else {
-                    failError = nserror;
-                }
+                let failError = error as NSError;
             }
             
             // Create the coordinator and store
