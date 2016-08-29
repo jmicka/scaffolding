@@ -21,21 +21,21 @@ public enum Color : Int {
     public var ios: UIColor {
         get {
             switch self {
-            case .Black: return UIColor.black();
-            case .Clear: return UIColor.clear();
+            case .Black: return UIColor.black;
+            case .Clear: return UIColor.clear;
             case .DarkGray: return UIColor(red: (55.0 / 255.0), green: (56.0 / 255.0), blue: (61.0 / 255.0), alpha: 1.0);
             case .DarkGreen: return UIColor(red: (7.0 / 255.0), green: (82.0 / 255.0), blue: (4.0 / 255.0), alpha: 1.0);
             case .DarkOrange: return UIColor(red: (158.0 / 255.0), green: (61.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
             case .DarkRed: return UIColor(red: (137.0 / 255.0), green: (1.0 / 255.0), blue: (1.0 / 255.0), alpha: 1.0);
             case .DarkSteelBlue: return UIColor(red: (37.0 / 255.0), green: (85.0 / 255.0), blue: (183.0 / 255.0), alpha: 1.0);
             case .DarkYellow: return UIColor(red: (151.0 / 255.0), green: (130.0 / 255.0), blue: (14.0 / 255.0), alpha: 1.0);
-            case .Gray: return UIColor.gray();
+            case .Gray: return UIColor.gray;
             case .Green: return UIColor(red: (47.0 / 255.0), green: (145.0 / 255.0), blue: (43.0 / 255.0), alpha: 1.0);
             case .Gold: return UIColor(red: (238.0 / 255.0), green: (202.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
             case .LightBlue: return UIColor(red: (7.0 / 255.0), green: (192.0 / 255.0), blue: (217.0 / 255.0), alpha: 1.0);
-            case .Orange: return UIColor.orange();
-            case .Red: return UIColor.red();
-            case .White: return UIColor.white();
+            case .Orange: return UIColor.orange;
+            case .Red: return UIColor.red;
+            case .White: return UIColor.white;
             case .Yellow: return UIColor(red: (191.0 / 255.0), green: (196.0 / 255.0), blue: (35.0 / 255.0), alpha: 1.0);
             }
         }
@@ -44,21 +44,21 @@ public enum Color : Int {
     public var osx: NSColor {
         get {
             switch self {
-            case .Black: return NSColor.black();
-            case .Clear: return NSColor.clear();
+            case .Black: return NSColor.black;
+            case .Clear: return NSColor.clear;
             case .DarkGray: return NSColor(red: (55.0 / 255.0), green: (56.0 / 255.0), blue: (61.0 / 255.0), alpha: 1.0);
             case .DarkGreen: return NSColor(red: (7.0 / 255.0), green: (82.0 / 255.0), blue: (4.0 / 255.0), alpha: 1.0);
             case .DarkOrange: return NSColor(red: (158.0 / 255.0), green: (61.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
             case .DarkRed: return NSColor(red: (137.0 / 255.0), green: (1.0 / 255.0), blue: (1.0 / 255.0), alpha: 1.0);
             case .DarkSteelBlue: return NSColor(red: (37.0 / 255.0), green: (85.0 / 255.0), blue: (183.0 / 255.0), alpha: 1.0);
             case .DarkYellow: return NSColor(red: (151.0 / 255.0), green: (130.0 / 255.0), blue: (14.0 / 255.0), alpha: 1.0);
-            case .Gray: return NSColor.gray();
+            case .Gray: return NSColor.gray;
             case .Green: return NSColor(red: (47.0 / 255.0), green: (145.0 / 255.0), blue: (43.0 / 255.0), alpha: 1.0);
             case .Gold: return NSColor(red: (238.0 / 255.0), green: (202.0 / 255.0), blue: (2.0 / 255.0), alpha: 1.0);
             case .LightBlue: return NSColor(red: (7.0 / 255.0), green: (192.0 / 255.0), blue: (217.0 / 255.0), alpha: 1.0);
-            case .Orange: return NSColor.orange();
-            case .Red: return NSColor.red();
-            case .White: return NSColor.white();
+            case .Orange: return NSColor.orange;
+            case .Red: return NSColor.red;
+            case .White: return NSColor.white;
             case .Yellow: return NSColor(red: (191.0 / 255.0), green: (196.0 / 255.0), blue: (35.0 / 255.0), alpha: 1.0);
             }
         }

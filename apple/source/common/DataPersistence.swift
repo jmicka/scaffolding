@@ -20,10 +20,10 @@ public class DataPersistence {
     // MARK: - Core Data stack
     public lazy var applicationDocumentsDirectory: NSURL = {
         if (Constants.Device == "ios") {
-            let urls = FileManager.default().urlsForDirectory(.documentDirectory, inDomains: .userDomainMask);
-            return urls[urls.count-1];
+            let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask);
+            return urls[urls.count-1] as NSURL;
         } else {
-            let urls = FileManager.default().urlsForDirectory(.applicationSupportDirectory, inDomains: .userDomainMask);
+            let urls = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask);
             var appSupportURL = urls[urls.count - 1];
             do {
                 //TODO: clean this handling up
@@ -31,13 +31,13 @@ public class DataPersistence {
             } catch {
                 abort();
             }
-            return appSupportURL;
+            return appSupportURL as NSURL;
         }
     }()
     
     public lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main().urlForResource(Constants.Device, withExtension: "momd")!;
+        let modelURL = Bundle.main.url(forResource: Constants.Device, withExtension: "momd")!;
         return NSManagedObjectModel(contentsOf: modelURL)!;
     }()
     
@@ -56,8 +56,8 @@ public class DataPersistence {
             } catch {
                 // Report any error we got.
                 var dict = [String: AnyObject]();
-                dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data";
-                dict[NSLocalizedFailureReasonErrorKey] = failureReason;
+                dict[NSLocalizedDescriptionKey] = ("Failed to initialize the application's saved data" as AnyObject);
+                dict[NSLocalizedFailureReasonErrorKey] = (failureReason as AnyObject);
                 
                 dict[NSUnderlyingErrorKey] = error as NSError;
                 let wrappedError = NSError(domain: "YOUR_ERROR_DOMAIN", code: 9999, userInfo: dict);
@@ -68,7 +68,7 @@ public class DataPersistence {
             }
         } else {
 #if os(OSX)
-            let fileManager = FileManager.default();
+            let fileManager = FileManager.default;
             var failError: NSError? = nil;
             var shouldFail = false;
             var failureReason = "There was an error creating or loading the application's saved data.";
@@ -76,7 +76,7 @@ public class DataPersistence {
             // Make sure the application files directory is there
             do {
                 let properties = try self.applicationDocumentsDirectory.resourceValues(forKeys: [URLResourceKey.isDirectoryKey]);
-                if !properties[URLResourceKey.isDirectoryKey]!.boolValue {
+                if !(properties[URLResourceKey.isDirectoryKey]! as AnyObject).boolValue {
                     failureReason = "Expected a folder to store application data, found a file \(self.applicationDocumentsDirectory.path).";
                     shouldFail = true;
                 }
@@ -107,8 +107,8 @@ public class DataPersistence {
             if shouldFail || (failError != nil) {
                 // Report any error we got.
                 var dict = [String: AnyObject]();
-                dict[NSLocalizedDescriptionKey] = "Failed to initialize the application's saved data";
-                dict[NSLocalizedFailureReasonErrorKey] = failureReason;
+                dict[NSLocalizedDescriptionKey] = ("Failed to initialize the application's saved data" as AnyObject);
+                dict[NSLocalizedFailureReasonErrorKey] = (failureReason as AnyObject);
                 if failError != nil {
                     dict[NSUnderlyingErrorKey] = failError;
                 }

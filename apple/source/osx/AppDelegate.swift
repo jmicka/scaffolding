@@ -16,7 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var datastore: DataPersistence = DataPersistence();
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        app.activateIgnoringOtherApps(true);
+        app.activate(ignoringOtherApps: true);
         
         self.createViewLayout();
         window!.makeKeyAndOrderFront(nil);
@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
         
         if !datastore.commitEditing() {
-            NSLog("\(NSStringFromClass(self.dynamicType)) unable to commit editing to terminate");
+            NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing to terminate");
             return .terminateCancel;
         }
         

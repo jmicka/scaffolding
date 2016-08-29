@@ -6,6 +6,6 @@
 //  Copyright © 2016 Jedediah Micka. All rights reserved.
 //
 
-enum Errors: ErrorProtocol {
+enum Errors: Error {
     case UnableToSaveContext
 }

@@ -10,7 +10,7 @@ import UIKit;
 import ios_common;
 
 class SampleViewController: UIViewController {
-    private var view_color: Color = Color.Black;
+    fileprivate var view_color: Color = Color.Black;
 
     convenience init(color: Color) {
         self.init();

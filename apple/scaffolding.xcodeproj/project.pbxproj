@@ -10,6 +10,7 @@
 		092377AF1D1F0E10007DC73F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 092377AE1D1F0E10007DC73F /* Default-568h@2x.png */; };
 		092A2DB51D1F3707009BC240 /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DC1F731CC04C7A00021D1B /* ColorTests.swift */; };
 		092A2DBE1D1F4795009BC240 /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
+		0931D09D1D248F790019F25A /* osx_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0933F1201CC27DA5003581A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933F11F1CC27DA5003581A6 /* MainViewController.swift */; };
 		0933F1211CC27DA5003581A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933F11F1CC27DA5003581A6 /* MainViewController.swift */; };
 		0933F1221CC27DA5003581A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933F11F1CC27DA5003581A6 /* MainViewController.swift */; };
@@ -180,6 +181,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0931D09D1D248F790019F25A /* osx_common.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,14 +782,17 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = ZPXD7LS9WW;
 						DevelopmentTeamName = "Jedediah Micka";
+						LastSwiftMigration = 0800;
 					};
 					09DC1F981CC04F7400021D1B = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 09EE68821CAF180B004CE47E;
 					};
 					09DC1FA61CC04FB400021D1B = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 09EE68821CAF180B004CE47E;
 					};
@@ -1180,6 +1185,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.Tests-common-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1193,6 +1199,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.Tests-common-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1208,6 +1215,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.Tests-ios-unit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.app/ios";
 			};
 			name = Debug;
@@ -1224,6 +1232,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ios.app/ios";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1239,6 +1248,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jedmicka.Tests-ios-ui";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ios;
 			};
 			name = Debug;
@@ -1254,6 +1264,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ios;
 				VALIDATE_PRODUCT = YES;
 			};

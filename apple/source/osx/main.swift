@@ -14,4 +14,4 @@ let delegate = AppDelegate();
 app.delegate = delegate;
 
 // start the run loop
-NSApplicationMain(Process.argc, Process.unsafeArgv);
+NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv);

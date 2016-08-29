@@ -42,10 +42,10 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func shouldAutorotate() -> Bool {
+    @nonobjc func shouldAutorotate() -> Bool {
         // permit any recognized autorotate except upside down
-        if (UIDevice.current().orientation == UIDeviceOrientation.portrait ||
-            UIDevice.current().orientation == UIDeviceOrientation.unknown) {
+        if (UIDevice.current.orientation == UIDeviceOrientation.portrait ||
+            UIDevice.current.orientation == UIDeviceOrientation.unknown) {
             return false;
         }
         else {
@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
     }
     
     
-    private func createViewLayout() {
+    fileprivate func createViewLayout() {
         let first_view_controller: SampleViewController  = SampleViewController(color: Color.Red);
         let second_view_controller: SampleViewController  = SampleViewController(color: Color.LightBlue);
         
@@ -70,7 +70,7 @@ class MainViewController: UIViewController {
     
     
     
-    private func showLaunchProgressModal() {
+    fileprivate func showLaunchProgressModal() {
         let modal_view_controller = LaunchProgressViewController();
         modal_view_controller.modalPresentationStyle = .overCurrentContext;
         root_view_controller.present(modal_view_controller, animated: false, completion: { () -> Void in

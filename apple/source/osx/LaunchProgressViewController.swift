@@ -47,8 +47,8 @@ class LaunchProgressViewController : NSViewController {
         
         // sizing constraints
         // subview
-        let subview_horizontal_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "H:[subview(>=subview_min_width,<=subview_max_width)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
-        let subview_vertical_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "V:[subview(>=subview_min_height,<=subview_max_height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary, views: view_dictionary);
+        let subview_horizontal_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "H:[subview(>=subview_min_width,<=subview_max_width)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary as [String : NSNumber]?, views: view_dictionary);
+        let subview_vertical_size_constraint: Array = NSLayoutConstraint.constraints(withVisualFormat: "V:[subview(>=subview_min_height,<=subview_max_height)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: metric_dictionary as [String : NSNumber]?, views: view_dictionary);
         subview.addConstraints(subview_horizontal_size_constraint);
         subview.addConstraints(subview_vertical_size_constraint);
         
