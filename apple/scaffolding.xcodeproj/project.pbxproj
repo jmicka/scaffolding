@@ -16,11 +16,12 @@
 		0933F1221CC27DA5003581A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0933F11F1CC27DA5003581A6 /* MainViewController.swift */; };
 		0933F1231CC2870B003581A6 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
 		0933F1241CC2870B003581A6 /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
+		094B903B1D7522EF0011FE7A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 094B90391D7522EF0011FE7A /* DataModel.xcdatamodeld */; };
+		094B903C1D7522EF0011FE7A /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 094B90391D7522EF0011FE7A /* DataModel.xcdatamodeld */; };
 		097A6A3B1CBCB32000636B8D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A3A1CBCB32000636B8D /* MainViewController.swift */; };
 		097A6A481CBCB91D00636B8D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A471CBCB91D00636B8D /* main.swift */; };
 		097A6A4E1CBCBAEF00636B8D /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */; };
 		09BDC8A31D2076F100647E58 /* osx_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; };
-		09BDC8AB1D20782F00647E58 /* osx_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98D951CB30A2C0083DEDE /* osx_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09BDC8AD1D20789A00647E58 /* ios_common.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		09CB0B471D1EFBCA0000C5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5E1CB4560B00F90D1B /* Constants.swift */; };
 		09CB0B481D1EFBCE0000C5C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D41A5E1CB4560B00F90D1B /* Constants.swift */; };
@@ -41,10 +42,8 @@
 		09DFF4821D04C314006D5162 /* LaunchProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09DFF47F1D04C314006D5162 /* LaunchProgressViewController.swift */; };
 		09E98DCF1CB30D530083DEDE /* ios_common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09E98DBA1CB30D530083DEDE /* ios_common.framework */; };
 		09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68531CAF17AE004CE47E /* AppDelegate.swift */; };
-		09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */; };
 		09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68851CAF180B004CE47E /* AppDelegate.swift */; };
 		09EE68881CAF180B004CE47E /* SampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09EE68871CAF180B004CE47E /* SampleViewController.swift */; };
-		09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */; };
 		09EE68901CAF180B004CE47E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09EE688F1CAF180B004CE47E /* Assets.xcassets */; };
 		09F706551CC18F1200576950 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F706531CC18EF500576950 /* Color.swift */; };
 		09F706561CC18F1300576950 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F706531CC18EF500576950 /* Color.swift */; };
@@ -195,6 +194,7 @@
 		092377B31D1F3209007DC73F /* libswiftSwiftOnoneSupport.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftSwiftOnoneSupport.tbd; path = System/Library/PrivateFrameworks/Swift/libswiftSwiftOnoneSupport.tbd; sourceTree = SDKROOT; };
 		092377B61D1F3283007DC73F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		0933F11F1CC27DA5003581A6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = source/osx/MainViewController.swift; sourceTree = SOURCE_ROOT; };
+		094B903A1D7522EF0011FE7A /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		097A6A3A1CBCB32000636B8D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = source/ios/MainViewController.swift; sourceTree = SOURCE_ROOT; };
 		097A6A471CBCB91D00636B8D /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = source/osx/main.swift; sourceTree = SOURCE_ROOT; };
 		097A6A4D1CBCBAEF00636B8D /* SampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SampleViewController.swift; path = source/osx/SampleViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -229,12 +229,10 @@
 		09E98DBA1CB30D530083DEDE /* ios_common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ios_common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68501CAF17AE004CE47E /* osx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = osx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68531CAF17AE004CE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = source/osx/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
-		09EE68561CAF17AE004CE47E /* osx.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = osx.xcdatamodel; sourceTree = "<group>"; };
 		09EE685D1CAF17AE004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = source/osx/Info.plist; sourceTree = SOURCE_ROOT; };
 		09EE68831CAF180B004CE47E /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09EE68851CAF180B004CE47E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = source/ios/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		09EE68871CAF180B004CE47E /* SampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleViewController.swift; sourceTree = "<group>"; };
-		09EE688D1CAF180B004CE47E /* ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios.xcdatamodel; sourceTree = "<group>"; };
 		09EE688F1CAF180B004CE47E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = source/ios/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		09EE68941CAF180B004CE47E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = source/ios/Info.plist; sourceTree = SOURCE_ROOT; };
 		09F706531CC18EF500576950 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = source/common/Color.swift; sourceTree = SOURCE_ROOT; };
@@ -509,6 +507,7 @@
 		09EE68471CAF17AE004CE47E = {
 			isa = PBXGroup;
 			children = (
+				094B90391D7522EF0011FE7A /* DataModel.xcdatamodeld */,
 				092377AE1D1F0E10007DC73F /* Default-568h@2x.png */,
 				097A6A5A1CC022CF00636B8D /* Alamofire.xcodeproj */,
 				09DC1FD31CC0512F00021D1B /* Source */,
@@ -542,7 +541,6 @@
 				097A6A511CBCBCF700636B8D /* Views */,
 				097A6A471CBCB91D00636B8D /* main.swift */,
 				09EE685D1CAF17AE004CE47E /* Info.plist */,
-				09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */,
 			);
 			name = osx;
 			path = source/osx;
@@ -555,7 +553,6 @@
 				097A6A521CBCBD1900636B8D /* Views */,
 				09EE688F1CAF180B004CE47E /* Assets.xcassets */,
 				09EE68941CAF180B004CE47E /* Info.plist */,
-				09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */,
 			);
 			name = ios;
 			path = source/ios;
@@ -1058,6 +1055,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A6D1CBB042C00F90D1B /* Errors.swift in Sources */,
+				094B903B1D7522EF0011FE7A /* DataModel.xcdatamodeld in Sources */,
 				09D41A5D1CB451E600F90D1B /* DataPersistence.swift in Sources */,
 				09F706551CC18F1200576950 /* Color.swift in Sources */,
 				09CB0B471D1EFBCA0000C5C6 /* Constants.swift in Sources */,
@@ -1069,6 +1067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09D41A6F1CBB042C00F90D1B /* Errors.swift in Sources */,
+				094B903C1D7522EF0011FE7A /* DataModel.xcdatamodeld in Sources */,
 				09D41A5C1CB451DF00F90D1B /* DataPersistence.swift in Sources */,
 				09F706561CC18F1300576950 /* Color.swift in Sources */,
 				09CB0B481D1EFBCE0000C5C6 /* Constants.swift in Sources */,
@@ -1080,7 +1079,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09DFF4801D04C314006D5162 /* LaunchProgressViewController.swift in Sources */,
-				09EE68571CAF17AE004CE47E /* osx.xcdatamodeld in Sources */,
 				09EE68541CAF17AE004CE47E /* AppDelegate.swift in Sources */,
 				097A6A4E1CBCBAEF00636B8D /* SampleViewController.swift in Sources */,
 				097A6A481CBCB91D00636B8D /* main.swift in Sources */,
@@ -1092,7 +1090,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EE688E1CAF180B004CE47E /* ios.xcdatamodeld in Sources */,
 				09DFF47C1D0448F1006D5162 /* LaunchProgressViewController.swift in Sources */,
 				09EE68881CAF180B004CE47E /* SampleViewController.swift in Sources */,
 				09EE68861CAF180B004CE47E /* AppDelegate.swift in Sources */,
@@ -1728,23 +1725,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		09EE68551CAF17AE004CE47E /* osx.xcdatamodeld */ = {
+		094B90391D7522EF0011FE7A /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				09EE68561CAF17AE004CE47E /* osx.xcdatamodel */,
+				094B903A1D7522EF0011FE7A /* DataModel.xcdatamodel */,
 			);
-			currentVersion = 09EE68561CAF17AE004CE47E /* osx.xcdatamodel */;
-			path = osx.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		09EE688C1CAF180B004CE47E /* ios.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				09EE688D1CAF180B004CE47E /* ios.xcdatamodel */,
-			);
-			currentVersion = 09EE688D1CAF180B004CE47E /* ios.xcdatamodel */;
-			path = ios.xcdatamodeld;
+			currentVersion = 094B903A1D7522EF0011FE7A /* DataModel.xcdatamodel */;
+			name = DataModel.xcdatamodeld;
+			path = source/common/DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
