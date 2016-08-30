@@ -37,7 +37,11 @@ public class DataPersistence {
     
     public lazy var managedObjectModel: NSManagedObjectModel = {
         // The managed object model for the application. This property is not optional. It is a fatal error for the application not to be able to find and load its model.
-        let modelURL = Bundle.main.url(forResource: Constants.Device, withExtension: "momd")!;
+        let bundle_string = "com.jedmicka." + Constants.Device + ".common";
+        
+        let target_bundle = Bundle(identifier: bundle_string);
+        
+        let modelURL = target_bundle!.url(forResource: "DataModel", withExtension: "momd")!;
         return NSManagedObjectModel(contentsOf: modelURL)!;
     }()
     
