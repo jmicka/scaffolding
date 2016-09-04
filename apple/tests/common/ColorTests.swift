@@ -13,8 +13,21 @@ import XCTest;
     @testable import osx_common;
 #endif
 
-
 class ColorTests: XCTestCase {
+    /// array containing all color objects, permitting foreach operations
+    var array_of_all_colors: [Color] {
+        get {
+            var i = 0;
+            var result: [Color] = [];
+            
+            while let color = Color(rawValue: i) {
+                result.append(color);
+                i += 1;
+            }
+            
+            return result;
+        }
+    };
     
     override func setUp() {
         super.setUp()
@@ -33,6 +46,12 @@ class ColorTests: XCTestCase {
         
         XCTAssertEqual(color1, color2, "two identical color objects should be equal");
         XCTAssertNotEqual(color1, color3, "two unequal color objects should not be equal");
+    }
+    
+    func testColorStringConvertability() {
+        for color in self.array_of_all_colors {
+            XCTAssertEqual( String(format: "\(color)"), color.description, "all colors should be string convertible");
+        }
     }
     
 }

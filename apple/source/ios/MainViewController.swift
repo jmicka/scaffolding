@@ -71,7 +71,7 @@ class MainViewController: UIViewController {
     
     
     fileprivate func showLaunchProgressModal() {
-        let modal_view_controller = LaunchProgressViewController();
+        let modal_view_controller = LaunchProgressModalViewController();
         modal_view_controller.modalPresentationStyle = .overCurrentContext;
         root_view_controller.present(modal_view_controller, animated: false, completion: { () -> Void in
             modal_view_controller.loadApplication();
