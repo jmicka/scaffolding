@@ -9,54 +9,63 @@
 import Cocoa;
 import osx_common;
 
-
+/**
+ 
+ Class governing the main view controller for the app.
+ 
+ Parameters:
+ - *splash_screen:* (private) splash screen modal view
+ - *red_view_controller:* (private) first sample view controller
+ - *blue_view_controller:* (private) second sample view controller
+ */
 class MainViewController : NSViewController {
-    
-    let firstVC: SampleViewController = SampleViewController(color: Color.Red);
-    let secondVC: SampleViewController  = SampleViewController(color: Color.LightBlue);
+    // views
+    /// view defining modal splash screen content
+    private let splash_screen: SplashScreen = SplashScreen(frame: Constants.OSXWindowFrame);
+    // view controllers
+    /// first sample view controller
+    private let red_view_controller: SampleViewController = SampleViewController(color: Color.Red);
+    /// second sample view controller
+    private let blue_view_controller: SampleViewController  = SampleViewController(color: Color.LightBlue);
     
     override func loadView() {
-        self.view = NSView(frame: Constants.OSXWindowFrame);
-        self.view.wantsLayer = true;
-        self.view.autoresizesSubviews = true;
-        self.view.layer!.backgroundColor = Color.DarkGray.osx.cgColor;
-        self.view.autoresizingMask = [NSAutoresizingMaskOptions.viewWidthSizable, NSAutoresizingMaskOptions.viewHeightSizable];
+        self.view = BackgroundView(frame: Constants.OSXWindowFrame);
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad();
-        
-        self.createViewLayout();
+    /**
+     
+     Displays the sample Red view controller.
+     
+     */
+    func displayRedViewController() {
+        self.view = red_view_controller.view;
     }
     
-    override func viewDidAppear() {
-        super.viewDidAppear();
-        
-        self.showLaunchProgressModal();
-    }
-
-    private func createViewLayout() {
-        self.insertChildViewController(firstVC, at: 0);
-        self.insertChildViewController(secondVC, at: 1);
-        self.view.addSubview(firstVC.view);
-        self.view.addSubview(secondVC.view);
-        
-        self.firstVC.view.isHidden = false;
-    }
-
-    func loadFirstVC() {
-        self.firstVC.view.isHidden = false;
-        self.secondVC.view.isHidden = true;
+    /**
+     
+     Displays the sample Blue view controller.
+     
+     */
+    func displayBlueViewController() {
+        self.view = blue_view_controller.view;
     }
     
-    func loadSecondVC() {
-        self.secondVC.view.isHidden = false;
-        self.firstVC.view.isHidden = true;
+    /**
+     
+     Displays the splash screen view.
+     
+     */
+    func displaySplashScreen() {
+        self.view = splash_screen;
     }
     
-    func showLaunchProgressModal() {
-        let modal_view_controller = LaunchProgressViewController();
-        self.presentViewControllerAsSheet(modal_view_controller);
-        self.dismissViewController(modal_view_controller);
+    /**
+     
+     Dismisses the splash screen view.
+     
+     */
+    func dismissSplashScreen() {
+        self.view = red_view_controller.view;
     }
 }
+

@@ -9,20 +9,31 @@
 import UIKit;
 import ios_common;
 
+/**
+ 
+ Class governing the top-level view controller.
+ 
+ */
 class MainViewController: UIViewController {
-    let root_view_controller: UITabBarController = UITabBarController();
-    let NAVBAR_COLOR: UIColor = Color.DarkSteelBlue.ios;
+    /// application delegate
+    let delegate = UIApplication.shared.delegate as! AppDelegate;
     
-    let NAVBAR_FONT: UIFont = UIFont(name: "Georgia", size: 22)!;
+    // views
+    
+    // view controllers
+    /// primary view controller
+    let root_view_controller: TabBarViewController = TabBarViewController();
+    /// splash screen view controller
+    let splash_screen_controller: SplashScreenViewController = SplashScreenViewController(frame: UIScreen.main.bounds);
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.createViewLayout();
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         
+        let navbar_font: UIFont = UIFont(name: Constants.TitleFontName, size: CGFloat(Constants.TitleFontSize))!;
         
         // must attach after the root view controller appears
         let nav: UINavigationController = UINavigationController( rootViewController: root_view_controller );
@@ -31,10 +42,11 @@ class MainViewController: UIViewController {
         let navigation_bar_appearace = UINavigationBar.appearance();
         navigation_bar_appearace.tintColor = Color.DarkSteelBlue.ios;
         navigation_bar_appearace.barTintColor = Color.White.ios;
-        navigation_bar_appearace.titleTextAttributes = [ NSForegroundColorAttributeName: NAVBAR_COLOR, NSFontAttributeName: NAVBAR_FONT ];
+        navigation_bar_appearace.titleTextAttributes = [ NSForegroundColorAttributeName: Constants.TitleTextColor.ios, NSFontAttributeName: navbar_font ];
         
         self.present(nav, animated: false, completion: nil);
-        self.showLaunchProgressModal();
+        
+        self.displaySplashScreen();
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,7 +56,7 @@ class MainViewController: UIViewController {
     
     @nonobjc func shouldAutorotate() -> Bool {
         // permit any recognized autorotate except upside down
-        if (UIDevice.current.orientation == UIDeviceOrientation.portrait ||
+        if (UIDevice.current.orientation == UIDeviceOrientation.portraitUpsideDown ||
             UIDevice.current.orientation == UIDeviceOrientation.unknown) {
             return false;
         }
@@ -53,30 +65,24 @@ class MainViewController: UIViewController {
         }
     }
     
-    
-    fileprivate func createViewLayout() {
-        let first_view_controller: SampleViewController  = SampleViewController(color: Color.Red);
-        let second_view_controller: SampleViewController  = SampleViewController(color: Color.LightBlue);
-        
-        let controllers = [first_view_controller, second_view_controller]
-        root_view_controller.viewControllers = controllers;
-        
-        let first_image = UIImage(named: "first icon");
-        let second_image = UIImage(named: "second icon");
-        
-        first_view_controller.tabBarItem = UITabBarItem(title: "First Tab", image: first_image, tag: 1);
-        second_view_controller.tabBarItem = UITabBarItem(title: "Second Tab", image: second_image, tag:2);
+    /**
+     
+     Presents controller governing splash screen.
+     
+     */
+    func displaySplashScreen() {
+        splash_screen_controller.modalPresentationStyle = .overCurrentContext;
+        root_view_controller.present(splash_screen_controller, animated: false, completion: nil);
     }
     
-    
-    
-    fileprivate func showLaunchProgressModal() {
-        let modal_view_controller = LaunchProgressModalViewController();
-        modal_view_controller.modalPresentationStyle = .overCurrentContext;
-        root_view_controller.present(modal_view_controller, animated: false, completion: { () -> Void in
-            modal_view_controller.loadApplication();
-            modal_view_controller.dismissViewController();
-        });
+    /**
+     
+     Dismisses controller governing splash screen.
+     
+     */
+    func dismissSplashScreen() {
+        self.splash_screen_controller.dismiss(animated: false, completion: nil);
     }
 }
+
 

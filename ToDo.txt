@@ -1,9 +1,7 @@
 Resolve menu functions in OS X app that no longer work (quit)
-refactor _ = handling of methods a bit better in main/appDelegate of OS X
 Resolve try/catch and unused method return values (warning errors in compiler)
 
 add unit tests for DataPersistence
-ensure no sensitive bits stored in project
 add Handoff support
 add networking queue for offline comms
 add threading
