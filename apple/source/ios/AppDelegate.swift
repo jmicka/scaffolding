@@ -11,17 +11,24 @@ import ios_common
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-    var datastore: DataPersistence = DataPersistence();
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    var window: UIWindow?;
+    var controller: MainViewController?;
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds);
-        window!.backgroundColor = UIColor.gray;
+        window!.backgroundColor = Color.DarkGray.ios;
         
-        window!.rootViewController = MainViewController();
+        controller = MainViewController();
+        
+        window!.rootViewController = controller;
         window!.makeKeyAndVisible();
+        
+        // TODO: shift this activity to a background thread
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(50)) {
+            self.loadApp();
+        }
+        
         return true
     }
 
@@ -46,11 +53,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        do {
-            _ = try datastore.saveContext();
-        } catch {
-            abort();
+    }
+    
+    private func loadApp() {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(1500)) {
+            self.dismissSplashScreen();
         }
+    }
+    
+    private func dismissSplashScreen() {
+        self.controller!.dismissSplashScreen();
+        
     }
 
 }
