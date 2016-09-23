@@ -14,9 +14,9 @@ BEGIN
 	IF NOT EXISTS (
 		SELECT *
 		FROM   pg_catalog.pg_user
-		WHERE  usename = 'SAMPLE_USER')
+		WHERE  usename = 'sample_user')
 	THEN
-		CREATE USER SAMPLE_USER WITH PASSWORD 'password' SUPERUSER;
+		CREATE USER sample_user WITH PASSWORD 'password' SUPERUSER;
 	END IF;
 
 END;
@@ -24,7 +24,7 @@ $createusers$;
 
 SET ROLE 'sample_user';
 
-CREATE DATABASE SAMPLE_DB;
+CREATE DATABASE sample_db;
 
 -- ensure the DB is using the same config settings as prod/testing servers
 ALTER SYSTEM SET TIMEZONE TO 'UTC';
