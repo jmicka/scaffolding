@@ -9,109 +9,109 @@
 import Cocoa;
 import osx_common;
 
+/**
+ 
+ App delegate for OS X application.
+ 
+ Parameters:
+ - *window:* window of the app
+ - *controller:* primary view controller for the app
+ - *engine:* core game engine, loaded as module
+ */
 class AppDelegate: NSObject, NSApplicationDelegate {
-
-    var window: NSWindow?;
-    var controller: MainViewController?;
-    var datastore: DataPersistence = DataPersistence();
+    
+    var window: NSWindow!;
+    var controller: MainViewController = MainViewController();
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        let mask = NSWindowStyleMask([.titled, .resizable, .miniaturizable, .closable]);
+        window = NSWindow(contentRect: Constants.OSXWindowFrame, styleMask: mask, backing: NSBackingStoreType.buffered, defer: false);
         app.activate(ignoringOtherApps: true);
+        self.createWindowLayout();
+        window.makeKeyAndOrderFront(nil);
         
-        self.createViewLayout();
-        window!.makeKeyAndOrderFront(nil);
+        self.displaySplashScreen();
     }
-
+    
     func applicationWillTerminate(_ aNotification: Notification) {
-        do {
-            _ = try datastore.saveContext();
-        } catch {
-            abort();
-        }
     }
     
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplicationTerminateReply {
-        
-        if !datastore.commitEditing() {
-            NSLog("\(NSStringFromClass(type(of: self))) unable to commit editing to terminate");
-            return .terminateCancel;
-        }
-        
-        if !datastore.hasChanges {
-            return .terminateNow;
-        }
-        
-        do {
-            _ = try datastore.saveContext();
-        } catch {
-            let nserror = error as NSError;
-            // Customize this code block to include application-specific recovery steps.
-            let result = sender.presentError(nserror);
-            if (result) {
-                return .terminateCancel;
-            }
-            
-            let question = NSLocalizedString("Could not save changes while quitting. Quit anyway?", comment: "Quit without saves error question message");
-            let info = NSLocalizedString("Quitting now will lose any changes you have made since the last successful save", comment: "Quit without saves error question info");
-            let quitButton = NSLocalizedString("Quit anyway", comment: "Quit anyway button title");
-            let cancelButton = NSLocalizedString("Cancel", comment: "Cancel button title");
-            let alert = NSAlert();
-            alert.messageText = question;
-            alert.informativeText = info;
-            alert.addButton(withTitle: quitButton);
-            alert.addButton(withTitle: cancelButton);
-            
-            let answer = alert.runModal();
-            if answer == NSAlertFirstButtonReturn {
-                return .terminateCancel;
-            }
-        }
-        // If we got here, it is time to quit.
         return .terminateNow;
     }
-
+    
     func windowWillReturnUndoManager(_ window: NSWindow) -> UndoManager? {
-        return datastore.undoManager;
+        return nil;
     }
     
     
     
-    // MARK: Menu-related functions
-    func aboutAction(_ sender: AnyObject!) {
+    // MARK: (private) Menu-related functions
+    /**
+     
+     Handles action when user clicks "About".
+     
+     Parameters:
+     - *sender:* object that sent the request
+     */
+    @objc private func aboutAction(_ sender: AnyObject!) {
     }
     
-    func saveAction(_ sender: AnyObject!) {
-        do {
-            _ = try datastore.saveContext();
-        } catch {
-        }
+    /**
+     
+     Handles action when user clicks "Save". Propagates latest changes to current game to disk.
+     
+     Parameters:
+     - *sender:* object that sent the request
+     */
+    @objc private func saveAction(_ sender: AnyObject!) {
     }
     
-    func quitAction(_ sender: AnyObject!) {
+    /**
+     
+     Handles action when user clicks "Quit". Terminates the app.
+     
+     Parameters:
+     - *sender:* object that sent the request
+     */
+    @objc private func quitAction(_ sender: AnyObject!) {
         _ = applicationShouldTerminate(app);
     }
     
-    func viewWindow1Action(_ sender: AnyObject!) {
-        _ = controller?.loadFirstVC();
+    /**
+     
+     Handles action when user clicks "Window -> Red Window".
+     
+     Parameters:
+     - *sender:* object that sent the request
+     */
+    @objc private func displayRedWindow(_ sender: AnyObject!) {
+        _ = controller.displayRedViewController();
     }
     
-    func viewWindow2Action(_ sender: AnyObject!) {
-        _ = controller?.loadSecondVC();
+    /**
+     
+     Handles action when user clicks "Window -> Blue Window".
+     
+     Parameters:
+     - *sender:* object that sent the request
+     */
+    @objc private func displayBlueWindow(_ sender: AnyObject!) {
+        _ = controller.displayBlueViewController();
     }
     
     
     
     // MARK: Private functions
-    private func createViewLayout() {
-        let mask: NSWindowStyleMask = NSWindowStyleMask([.titled, .resizable, .miniaturizable, .closable]);
+    /**
+     
+     Creates basic window layout for app.
+     */
+    private func createWindowLayout() {
         
-        self.window = NSWindow(contentRect: NSMakeRect(100, 100, 800, 600), styleMask: mask, backing: NSBackingStoreType.buffered, defer: false);
-        self.window?.title = NSLocalizedString("App Title", comment: "title of application");
+        self.window.title = NSLocalizedString("App Title", comment: "title of application");
+        self.window.contentViewController = controller;
         
-        self.controller = MainViewController();
-        self.window!.contentView!.addSubview(controller!.view);
-        
-
         let menu_tree = [
             "Apple": [
                 NSMenuItem(title: NSLocalizedString("About", comment: "about menu item"),  action: #selector(self.quitAction(_:)), keyEquivalent:"?"),
@@ -122,8 +122,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 NSMenuItem(title: NSLocalizedString("Save", comment: "save menu item"),  action: #selector(self.saveAction(_:)), keyEquivalent:"s"),
             ],
             "Window": [
-                NSMenuItem(title: NSLocalizedString("Panel 1", comment: "panel 1 menu item"),  action: #selector(self.viewWindow1Action(_:)), keyEquivalent:""),
-                NSMenuItem(title: NSLocalizedString("Panel 2", comment: "panel 2 menu item"),  action: #selector(self.viewWindow2Action(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Red Window", comment: "red window menu item"),  action: #selector(self.displayRedWindow(_:)), keyEquivalent:""),
+                NSMenuItem(title: NSLocalizedString("Blue Window", comment: "blue window menu item"),  action: #selector(self.displayBlueWindow(_:)), keyEquivalent:""),
             ]
         ];
         
@@ -131,14 +131,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         for (title, items) in menu_tree {
             let menu = NSMenu(title: title);
-            if let item: NSMenuItem? = main_menu.addItem(withTitle: title, action: nil, keyEquivalent:"") {
-                main_menu.setSubmenu(menu, for: item!);
-                for item in items {
-                    menu.addItem(item);
-                }
+            let item: NSMenuItem = main_menu.addItem(withTitle: title, action: nil, keyEquivalent: "");
+            main_menu.setSubmenu(menu, for: item);
+            for item in items {
+                menu.addItem(item);
             }
         }
         
         app.menu = main_menu;
+    }
+    
+    /**
+     
+     Displays splash screen modal.
+     */
+    private func displaySplashScreen() {
+        controller.displaySplashScreen();
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(10)) {
+            self.loadGame();
+        }
+    }
+    
+    /**
+     
+     Loads game content.
+     */
+    private func loadGame() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(750)) {
+            self.dismissSplashScreen();
+        }
+    }
+    
+    /**
+     
+     Dismisses splash screen modal.
+     */
+    private func dismissSplashScreen() {
+        controller.dismissSplashScreen();
     }
 }

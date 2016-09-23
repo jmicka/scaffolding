@@ -14,21 +14,30 @@ import ios_common;
  Class controlling the "loading" modal that appears when preparing a game for gameplay..
  
  TODO:
- - implement
+ - implement spinner / progress indicator
  */
-class LaunchProgressModalViewController: UIViewController {
-    let modal_subview = UIView(frame: CGRect(x: 0,y: 0,width: 450,height: 300));
-    let loading_label = UILabel(frame: CGRect(x:0, y:0, width: 100, height: 30));
+class SplashScreen: UIView {
+    /// visible portion of the splash screen
+    private let modal_subview = UIView();
+    /// "loading..." label of the splash screen
+    private let loading_label = UILabel();
     
-    override func loadView() {
-        self.view = UIView();
-        self.view.isOpaque = true;
-        self.view.layer.borderWidth = 0;
-        self.view.backgroundColor = Color.Clear.ios;
+    /**
+     
+     Class controlling the splash screen view layout.
+     
+     Parameters:
+     - *frame:* The frame within which the view should be constructed.
+     */
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.layer.backgroundColor = Color.Clear.ios.cgColor;
+        self.isHidden = false;
         
         modal_subview.translatesAutoresizingMaskIntoConstraints = false;
         modal_subview.isOpaque = true;
-        modal_subview.backgroundColor = Color.LightSteelBlue.ios;
+        modal_subview.layer.backgroundColor = Color.LightSteelBlue.ios.cgColor;
         modal_subview.layer.borderWidth = CGFloat(Constants.ModalBorderWidth);
         modal_subview.layer.cornerRadius = CGFloat(Constants.ModalBevelRadius);
         modal_subview.layer.borderColor = Color.RoyalBlue.ios.cgColor;
@@ -42,28 +51,31 @@ class LaunchProgressModalViewController: UIViewController {
         
         modal_subview.addSubview(loading_label);
         
-        self.view.addSubview(modal_subview);
+        self.addSubview(modal_subview);
         
         modal_subview.heightAnchor.constraint(greaterThanOrEqualToConstant: 200.0).isActive = true;
         modal_subview.widthAnchor.constraint(greaterThanOrEqualToConstant: 300.0).isActive = true;
         modal_subview.heightAnchor.constraint(lessThanOrEqualToConstant: 300.0).isActive = true;
         modal_subview.widthAnchor.constraint(lessThanOrEqualToConstant: 450.0).isActive = true;
         modal_subview.widthAnchor.constraint(equalTo: modal_subview.heightAnchor, multiplier: 1.5).isActive = true;
-        modal_subview.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true;
-        modal_subview.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true;
+        modal_subview.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true;
+        modal_subview.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true;
         
+        loading_label.heightAnchor.constraint(equalToConstant: 30.0).isActive = true;
+        loading_label.widthAnchor.constraint(equalToConstant: 150.0).isActive = true;
         loading_label.centerXAnchor.constraint(equalTo: modal_subview.centerXAnchor).isActive = true;
         loading_label.centerYAnchor.constraint(equalTo: modal_subview.centerYAnchor).isActive = true;
-        
-        modal_subview.sendSubview(toBack: loading_label);
-        view.sendSubview(toBack: modal_subview);
     }
     
-    func dismissViewController() {
-        self.dismiss(animated: false, completion: nil);
+    required convenience init(coder: NSCoder) {
+        self.init(coder: coder);
     }
     
-    func loadApplication() {
-        sleep(2);
+    init(coder: NSCoder? = nil, frame: CGRect? = nil) {
+        if let coder = coder {
+            super.init(coder: coder)!;
+        } else {
+            super.init(frame: frame!);
+        }
     }
 }
