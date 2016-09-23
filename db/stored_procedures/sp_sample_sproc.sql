@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION sp_sample_sproc(
-    IN _auth_token UUID NULL
+    IN _auth_token UUID
 )
 
 RETURNS SETOF type_sample AS $$
@@ -11,7 +11,7 @@ BEGIN
         RAISE EXCEPTION 'auth_token cannot be null' USING ERRCODE = '20000';
     END IF;
 
-    RETURN QUERY SELECT 'Hello World' AS string;
+    RETURN QUERY SELECT 'Hello World'::VARCHAR(128) AS "string";
 
 END
 $$ LANGUAGE PLPGSQL SECURITY DEFINER;

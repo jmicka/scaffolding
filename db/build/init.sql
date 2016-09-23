@@ -2,10 +2,10 @@
 -- Ensure All connections are terminated
 SELECT 	pg_terminate_backend(pg_stat_activity.pid)
 	FROM 	pg_stat_activity
-	WHERE 	datname = 'SAMPLE_DB'
+	WHERE 	datname = 'sample_db'
 			AND pid <> pg_backend_pid();
 
-DROP DATABASE IF EXISTS SAMPLE_DB;
+DROP DATABASE IF EXISTS sample_db;
 
 DO
 $createusers$
@@ -22,7 +22,7 @@ BEGIN
 END;
 $createusers$;
 
-SET ROLE 'SAMPLE_USER';
+SET ROLE 'sample_user';
 
 CREATE DATABASE SAMPLE_DB;
 
@@ -30,13 +30,13 @@ CREATE DATABASE SAMPLE_DB;
 ALTER SYSTEM SET TIMEZONE TO 'UTC';
 
 -- ensure we are using the appropriate db
-\c SAMPLE_DB;
+\c sample_db;
 
 -- build archived version of (scrubbed) db
-\i deploy_scripts/builds/build_0.db;
+\i build/deploy_scripts/builds/build_0.db;
 
 -- execute db scripts to advance db to next version
-\i deploy_scripts/sprint_1.sql;
+\i build/deploy_scripts/sprint_1.sql;
 COMMIT;
 
 -- make sure we have minimum set of possible permissions
