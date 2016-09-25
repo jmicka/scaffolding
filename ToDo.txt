@@ -11,6 +11,7 @@ multithread core data
 API:
 add better support for serving ordinary files
 refactor database query execution to reduce boilerplate in models
+code-review golang addition
 
 WEB:
 add angular framework
