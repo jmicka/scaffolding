@@ -1,3 +1,4 @@
+APPLE:
 Resolve menu functions in OS X app that no longer work (quit)
 Resolve try/catch and unused method return values (warning errors in compiler)
 
@@ -6,4 +7,13 @@ add Handoff support
 add networking queue for offline comms
 add threading
 multithread core data
+
+API:
+add better support for serving ordinary files
+refactor database query execution to reduce boilerplate in models
+
+WEB:
+add angular framework
+
+DB:
 
