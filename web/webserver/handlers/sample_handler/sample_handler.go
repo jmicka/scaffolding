@@ -1,16 +1,10 @@
-package controller
+package sample_handler
 
 import (
 	"net/http"
 
-	"scaffolding/server/shared/response"
-	"scaffolding/server/shared/router"
+	"scaffolding/webserver/response"
 )
-
-// Routes
-func init() {
-	router.Get("/api/v1/sample", get_sample)
-}
 
 const (
 	ItemCreated      = "item created"
@@ -27,6 +21,6 @@ const (
 	FriendlyError = "an error occurred, please try again later"
 )
 
-func get_sample(writer http.ResponseWriter, request *http.Request) {
+func Get(writer http.ResponseWriter, request *http.Request) {
 	response.Send(writer, http.StatusOK, ItemFound, 0, nil)
 }

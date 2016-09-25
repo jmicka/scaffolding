@@ -1,3 +1,4 @@
+/*
 The MIT License (MIT)
 
 Copyright (c) 2016 Joseph Spurrier
@@ -19,3 +20,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+ORIGINAL PROJECT CODE AVAILABLE AT: https://github.com/josephspurrier/gowebapi
+*/
+package static_handler
+
+import (
+	"net/http"
+	"strings"
+
+	"scaffolding/webserver/handlers/error_handler"
+)
+
+// Static maps static files
+func Get_File(writer http.ResponseWriter, request *http.Request) {
+	// Disable listing directories
+	if strings.HasSuffix(request.URL.Path, "/") {
+		error_handler.Generate(404)(writer, request)
+		return
+	}
+	http.ServeFile(writer, request, request.URL.Path[1:])
+}
