@@ -9,13 +9,35 @@ import (
 
 var pool *pgx.ConnPool
 
-// Connect to the database
-func Connect() {
+func Acquire_Connection() error{
+	conn, error := pool.Acquire()
+	if error != nil {
+		fmt.Fprintln(os.Stderr, "Error acquiring connection:", error)
+		os.Exit(1)
+	}
+	defer pool.Release(conn)
 
-	var err error
-	pool, err = pgx.NewConnPool(read_db_configuration())
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Unable to establish connection pool to database: %v\n", err)
+	rows, _ := conn.Query("SELECT * FROM sp_sample_sproc(_auth_token := uuid_generate_v4());")
+
+	for rows.Next() {
+		var string string
+		error := rows.Scan(&string)
+		if error != nil {
+			return error
+		}
+		fmt.Printf("%s\n", string)
+	}
+
+	return rows.Err()
+}
+
+// Connect to the database
+func Establish_Connection_Pool() {
+
+	var error error
+	pool, error = pgx.NewConnPool(read_db_configuration())
+	if error != nil {
+		fmt.Fprintf(os.Stderr, "Unable to establish connection pool to database: %v\n", error)
 		os.Exit(1)
 	}
 }

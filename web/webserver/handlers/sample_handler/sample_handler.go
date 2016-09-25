@@ -3,6 +3,7 @@ package sample_handler
 import (
 	"net/http"
 
+	"scaffolding/webserver/models/sample"
 	"scaffolding/webserver/response"
 )
 
@@ -22,5 +23,7 @@ const (
 )
 
 func Get(writer http.ResponseWriter, request *http.Request) {
+	sample.Get()
+	
 	response.Send(writer, http.StatusOK, ItemFound, 0, nil)
 }

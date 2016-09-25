@@ -18,7 +18,7 @@ func init() {
 func main() {
 
 	// Connect to database
-	database.Connect()
+	database.Establish_Connection_Pool()
 
 	// Load the routing table
 	routing_table.Load()
