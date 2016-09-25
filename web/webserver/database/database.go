@@ -9,26 +9,17 @@ import (
 
 var pool *pgx.ConnPool
 
-func Acquire_Connection() error{
+func Execute_Query(statement string) (*pgx.Rows, error) {
 	conn, error := pool.Acquire()
 	if error != nil {
 		fmt.Fprintln(os.Stderr, "Error acquiring connection:", error)
-		os.Exit(1)
+		return nil, error
 	}
 	defer pool.Release(conn)
 
-	rows, _ := conn.Query("SELECT * FROM sp_sample_sproc(_auth_token := uuid_generate_v4());")
+	rows, _ := conn.Query(statement)
 
-	for rows.Next() {
-		var string string
-		error := rows.Scan(&string)
-		if error != nil {
-			return error
-		}
-		fmt.Printf("%s\n", string)
-	}
-
-	return rows.Err()
+	return rows, nil
 }
 
 // Connect to the database

@@ -1,6 +1,7 @@
 package sample_handler
 
 import (
+	"log"
 	"net/http"
 
 	"scaffolding/webserver/models/sample"
@@ -23,7 +24,16 @@ const (
 )
 
 func Get(writer http.ResponseWriter, request *http.Request) {
-	sample.Get()
-	
-	response.Send(writer, http.StatusOK, ItemFound, 0, nil)
+	results, error := sample.Get()
+
+	if error == sample.ErrorNoResult {
+		response.Send(writer, http.StatusOK, ItemNotFound, 0, nil)
+		return
+	} else if error != nil {
+		log.Println(error)
+		response.SendError(writer, http.StatusInternalServerError, FriendlyError)
+		return
+	}
+
+	response.Send(writer, http.StatusOK, ItemFound, 1, sample.Results{results} )
 }
