@@ -12,8 +12,7 @@ API:
 add sample unit tests
 add better support for serving ordinary files
 refactor database query execution to reduce boilerplate in models
-code-review golang addition
-can we refactor to have model and handler as own package?
+should we refactor to have model and handler as own package?
 
 WEB:
 add angular framework
