@@ -1,12 +1,12 @@
 package main
 
 import (
-    "log"
+	"log"
 	"runtime"
 
 	"scaffolding/webserver/route"
-    "scaffolding/webserver/routing_table"
-    "scaffolding/webserver/database"
+	"scaffolding/webserver/routing_table"
+	"scaffolding/webserver/database"
 	"scaffolding/webserver/server"
 )
 
