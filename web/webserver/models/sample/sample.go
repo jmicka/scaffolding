@@ -2,13 +2,14 @@ package sample
 
 import (
 	"errors"
+	"fmt"
 
 	"scaffolding/webserver/database"
 )
 
 // Entity information
 type Entity struct {
-	String string
+	Property string
 }
 
 type Results []Entity
@@ -20,24 +21,30 @@ var (
 	ErrorNotExist = errors.New("does not exist")
 )
 
-func Get() (Entity, error) {
-	var statement string = "SELECT * FROM sp_sample_sproc(_auth_token := uuid_generate_v4());"
-	var return_value Entity
+func Get() (Results, error) {
+	var statement string = fmt.Sprintf("SELECT * FROM sp_sample_sproc(_auth_token := %v);", "uuid_generate_v4()")
+	results := Results{}
+
 	rows, error := database.Execute_Query(statement)
+	if error != nil {
+		return results, error
+	}
 
 	if rows != nil {
 		for rows.Next() {
-			var string string
-			error := rows.Scan(&string)
+			var column string
+			error := rows.Scan(&column)
 
 			if error != nil {
-				return return_value, error
+				return results, error
 			}
-			return_value.String = string;
+
+			row := Entity{ Property: column }
+			results = append(results, row)
 		}
 
-		return return_value, error
+		return results, error
 	} else {
-		return return_value, error
+		return results, error
 	}
 }
